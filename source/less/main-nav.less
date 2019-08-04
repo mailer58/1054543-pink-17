@@ -1,0 +1,47 @@
+.main-nav {
+  width: 320px;
+
+  a {
+    color: @white;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    text-transform: uppercase;
+  }
+
+  a:hover {
+    color: @pink;
+  }
+
+  a:active {
+    color: @pink-opacity;
+  }
+}
+
+.main-nav__list {
+  .list-reset();
+  display: none;
+}
+
+.main-nav__list--show {
+  display: block;
+}
+
+.main-nav-position {
+  position: absolute;
+  top: 64px;
+}
+
+.site-list__item {
+  background-color: @bluish;
+  text-align: center;
+  border-top: rgb(72, 84, 97) 1px solid;
+  border-bottom: rgba(0, 0, 0, 0.9) 1px solid;
+  width: 100%;
+  padding: 16px 0;
+}
+
+.main-nav .site-list__link-active:active,
+.main-nav .site-list__link-active:hover {
+  color: @white;
+}

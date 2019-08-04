@@ -4,26 +4,32 @@
   <head>
     <meta charset="utf-8">
     <title>Конкурс</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
-
-    <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logotype-white-mobile.png" width="75" height="22" alt="Pink logo">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+    <header class="page-header background-header-child-page">
+      <div class="page-header__logo-container">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="74" height="22" alt="Логотип Pink" id="siteLogo">
+        </a>
+        <button class="page-header__main-nav-toggle" type="button" id="toggle"><img src="img/icon-menu-burger.svg" class="svg-burger" id="menuToggle" width="50" height="24" alt="Переключатель меню"></button>
+        <h1 class="page-header__caption">
+          Конкурс на самое безбашенное путешествие с Пинк
+        </h1>
+      </div>
+      <nav class="main-nav main-nav-position">
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
+          <ul class="main-nav__list site-list" id="main-nav__list">
             <li class="site-list__item">
-              <a href="index.html">Главная</a>
+              <a class="site-list" href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="Photo.html">Фотографии</a>
+              <a href="photo.html">Фотографии</a>
             </li>
             <li class="site-list__item">
-              <a>Конкурс</a>
+              <a class="site-list__link-active">Конкурс</a>
             </li>
             <li class="site-list__item">
               <a href="#" target="_blank">Html academy</a>
@@ -33,19 +39,13 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="visually-hidden">
-        Пинк - сайт фотоприложения для раскрашивания серых будней
-      </h1>
       <section class="contest">
-        <h2 class="visually_hidden">
-          Конкурс с Пинк
-        </h2>
-        <b class="contest__slogan">Конкурс на самое безбашенное путешествие с Пинк</b>
+        <h2 class="visually-hidden">Анкета участника</h2>
       </section>
     </main>
-    <footer class="page-footer">
-      <a class="page-footer__logo">
-        <img class="page-footer__logo-image" src="img/logotype-blue-tablet.png" width="147" height="40" alt="Pink logo">
+    <footer class="page-footer container">
+      <a class="page-footer__logo-link" href="index.html">
+        <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="41" alt="Pink logo">
       </a>
       <div class="page-footer__social social">
         <ul class="social__list">
@@ -60,7 +60,9 @@
           </li>
         </ul>
       </div>
+      <p class="page-footer__developer">Разработано</p>
     </footer>
+    <script src="js/scripts.js"></script>
   </body>
 
 </html>

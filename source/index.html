@@ -4,20 +4,24 @@
   <head>
     <meta charset="utf-8">
     <title>Пинк - сайт фотоприложения для раскрашивания серых будней</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
 
-    <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logotype-white-mobile.png" width="75" height="22" alt="Логотип Pink">
-      </a>
+    <header class="page-header background-header-index-page">
+      <div class="page-header__logo-container">
+        <a class="page-header__logo">
+          <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="74" height="22" alt="Логотип Pink" id="siteLogo">
+        </a>
+        <button class="page-header__main-nav-toggle" type="button" id="toggle"><img src="img/icon-menu-burger.svg" class="svg-burger" id="menuToggle" width="50" height="24" alt="Переключатель меню"></button>
+      </div>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
+          <ul class="main-nav__list site-list" id="main-nav__list">
             <li class="site-list__item">
-              <a>Главная</a>
+              <a class="site-list__link-active">Главная</a>
             </li>
             <li class="site-list__item">
               <a href="photo.html">Фотографии</a>
@@ -36,11 +40,11 @@
       <h1 class="visually-hidden">
         Пинк - сайт фотоприложения для раскрашивания серых будней
       </h1>
-      <section class="download">
-        <h2 class="visually_hidden">
+      <section class="download container">
+        <h2 class="visually-hidden">
           Фотоприложения для различных операционных систем
         </h2>
-        <a class="download__button" href="https://www.apple.com/itunes/download/pink">
+        <a class="download__button button-templet" href="https://www.apple.com/itunes/download/pink">
           Скачать приложение
         </a>
         <ul class="download__list">
@@ -65,19 +69,19 @@
         </p>
       </section>
       <section class="features">
-        <h2 class="visually_hidden">
+        <h2 class="visually-hidden">
           Особенности приложения
         </h2>
-        <header class="features__header">
-          <p class="features__caption">
+        <header class="features__header container">
+          <p class="features__caption features__caption--margin">
             Устали от серости мегаполиса?
           </p>
-          <p class="features__caption">
+          <p class="features__caption features__caption--margin2">
             Нам есть, что вам предложить!
           </p>
         </header>
-        <ul class="features__list">
-          <li class="features__item">
+        <ul class="features__list container">
+          <li class="features__item features__item--padding-top">
             <b class="features__title">
               Поднимает настроение
             </b>
@@ -102,8 +106,12 @@
             </p>
           </li>
         </ul>
+        <div class="features__container">
+          <img class="features__photo" src="img/iphone-screen1-mobile@1x.png" width="159" height="277" id="iphone-screen-mobile" alt="Smile">
+        </div>
       </section>
     </main>
+    <script src="js/scripts.js"></script>
   </body>
 
 </html>
