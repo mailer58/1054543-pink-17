@@ -1,5 +1,3 @@
-window.onload = function() {
-
   var togglesArray = new Array(
     "img/icon-menu-burger.svg",
     "img/icon-menu-cross.svg"
@@ -18,6 +16,12 @@ window.onload = function() {
   var currentToggle = 0;
   var toggle = document.getElementById("menuToggle");
   var mainNav = document.querySelector(".site-list");
+  var pageHeader = document.querySelector(".page-header");
+  var bgHeaderIndexPagePosition = document.querySelector(".background-header-index-page");
+  var bgHeaderChildPagePosition = document.querySelector(".page-header__caption");
+  var toggleEnable = document.querySelector(".page-header__main-nav-toggle");
+  var pageHeaderLogoContainer = document.querySelector(".page-header__logo-container");
+  var fileName = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 
   logoPinkRoseMobile = new Image();
   logoPinkRoseMobile.src = "img/logo-pink-rose-mobile.svg";
@@ -32,40 +36,55 @@ window.onload = function() {
   crossOpacity = new Image();
   crossOpacity.src = "img/icon-menu-cross-opacity.svg";
 
-  toggle.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    mainNav.classList.toggle("main-nav__list--show");
-    currentToggle++;
-    if (currentToggle == togglesArray.length) {
-      currentToggle = 0;
-    }
-    document.getElementById("menuToggle").setAttribute("src", togglesArray[currentToggle]);
-  });
+  pageHeader.classList.add("page-header--bg-transparent");
+  toggleEnable.classList.add("page-header__main-nav-toggle--show-content");
+  mainNav.classList.add("main-nav__list--disable");
+  pageHeader.classList.add("page-header__strip");
+  pageHeaderLogoContainer.classList.add("page-header__logo-container--disable-border");
 
-  toggle.addEventListener("mouseover", function(evt) {
-    evt.preventDefault();
-    if (currentToggle === 0) {
-      document.getElementById("menuToggle").setAttribute("src", burgers[1]);
+  window.onload = function() {
+    if (fileName === "index.html") {
+      bgHeaderIndexPagePosition.classList.add("background-header-index-page--position");
     } else {
-      document.getElementById("menuToggle").setAttribute("src", crosses[1]);
+      bgHeaderChildPagePosition.classList.add(".page-header__caption--bg-position");
     }
-  });
 
-  toggle.addEventListener("mouseout", function(evt) {
-    evt.preventDefault();
-    if (currentToggle === 0) {
-      document.getElementById("menuToggle").setAttribute("src", burgers[0]);
-    } else {
-      document.getElementById("menuToggle").setAttribute("src", crosses[0]);
-    }
-  });
+    toggle.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      mainNav.classList.toggle("main-nav__list--show");
+      mainNav.classList.toggle("main-nav__list--position");
+      console.log(mainNav);
+      currentToggle++;
+      if (currentToggle == togglesArray.length) {
+        currentToggle = 0;
+      }
+      document.getElementById("menuToggle").setAttribute("src", togglesArray[currentToggle]);
+    });
 
-  toggle.addEventListener("mousedown", function(evt) {
-    evt.preventDefault();
-    if (currentToggle === 0) {
-      document.getElementById("menuToggle").setAttribute("src", burgers[2]);
-    } else {
-      document.getElementById("menuToggle").setAttribute("src", crosses[2]);
-    }
-  });
-};
+    toggle.addEventListener("mouseover", function(evt) {
+      evt.preventDefault();
+      if (currentToggle === 0) {
+        document.getElementById("menuToggle").setAttribute("src", burgers[1]);
+      } else {
+        document.getElementById("menuToggle").setAttribute("src", crosses[1]);
+      }
+    });
+
+    toggle.addEventListener("mouseout", function(evt) {
+      evt.preventDefault();
+      if (currentToggle === 0) {
+        document.getElementById("menuToggle").setAttribute("src", burgers[0]);
+      } else {
+        document.getElementById("menuToggle").setAttribute("src", crosses[0]);
+      }
+    });
+
+    toggle.addEventListener("mousedown", function(evt) {
+      evt.preventDefault();
+      if (currentToggle === 0) {
+        document.getElementById("menuToggle").setAttribute("src", burgers[2]);
+      } else {
+        document.getElementById("menuToggle").setAttribute("src", crosses[2]);
+      }
+    });
+  };

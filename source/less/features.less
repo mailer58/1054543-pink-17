@@ -6,6 +6,7 @@
   padding: 0;
   margin: 0 auto;
   font-size: 24px;
+  line-height: 29px;
   font-weight: 300;
   text-align: center;
   width: 280px;
@@ -16,12 +17,13 @@
 }
 
 .features__caption--margin2 {
-  margin-bottom: 140px;
+  margin-bottom: 80px;
 }
 
 .features__list {
   .list-reset();
   background-color: @gray;
+  padding-top: 50px;
 }
 
 .features__item {
@@ -34,15 +36,20 @@
   margin-bottom: 0;
 }
 
+.features__item--padding-top {
+  position: relative;
+}
+
 .features__item--padding-top::before {
   content: "";
   position: absolute;
   display: block;
   width: 320px;
-  height: 192px;
-  background-image: url("../img/bg-skew-mobile.png");
-  z-index: -1;
-  bottom: 0;
+  height: 198px;
+  transform: rotate(180deg);
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  bottom: -2px;
 }
 
 .features__title {

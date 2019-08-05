@@ -1,6 +1,6 @@
 .main-nav {
   width: 320px;
-
+  z-index: 50;
   a {
     color: @white;
     font-weight: 700;
@@ -20,16 +20,19 @@
 
 .main-nav__list {
   .list-reset();
+  display: block;
+  z-index: 100;
+}
+
+.main-nav__list--disable {
   display: none;
 }
 
 .main-nav__list--show {
   display: block;
-}
-
-.main-nav-position {
   position: absolute;
   top: 64px;
+  width: 320px;
 }
 
 .site-list__item {
@@ -41,7 +44,8 @@
   padding: 16px 0;
 }
 
-.main-nav .site-list__link-active:active,
-.main-nav .site-list__link-active:hover {
+
+.main-nav .site-list__link-active:hover,
+.main-nav .site-list__link-active:active {
   color: @white;
 }

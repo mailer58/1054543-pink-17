@@ -1,24 +1,31 @@
 .page-header {
+  position: relative;
   width: 320px;
+  background-color: @bluish;
   z-index: 0;
 }
 
 .background-header-index-page {
+  z-index: 5;
   position: relative;
   min-height: 462px;
   background: rgb(42, 58, 74) url("../img/back-mobile@1x.jpg") no-repeat;
 }
 
+.background-header-index-page--position {
+  background: rgb(42, 58, 74) url("../img/back-mobile@1x.jpg") no-repeat 0 -64px;
+}
+
 .background-header-child-page {
-  position: relative;
+  z-index: 30;
   min-height: 235px;
   background: rgb(42, 58, 74) url("../img/back-mobile@1x.jpg") no-repeat;
 }
 
-.page-header:before {
+.page-header__strip::before {
   content: "";
-  position: absolute;
   display: block;
+  position: absolute;
   width: 320px;
   height: 64px;
   background-color: @black-opacity;
@@ -36,29 +43,54 @@
   background: url("../img/iphone-hand-mobile@1x.png") no-repeat;
   left: 0;
   top: 176px;
-  z-index: -1;
+  z-index: 1;
 }
 
 .page-header__logo-container {
   padding: 21px 20px 12px;
+  z-index: -100;
+  border-bottom: rgba(0, 0, 0, 0.9) 1px solid;
+}
+
+.page-header__logo-container--disable-border {
+  padding: 21px 20px 12px;
+  z-index: -100;
+  border-bottom: none;
 }
 
 .page-header__main-nav-toggle {
   background: none;
   border: none;
   padding: 0;
-  display: inline-block;
+  display: none;
   cursor: pointer;
   width: 50px;
   height: 24px;
+  z-index: 700;
+}
+
+.page-header__main-nav-toggle--show-content {
+  display: inline-block;
 }
 
 .page-header__caption {
+  z-index: 50;
   text-align: center;
   color: @white;
   font-size: 24px;
   line-height: 29px;
   font-weight: 300;
-  margin: 48px 0 0;
-  width: 280px;
+  margin: 0 auto;
+  padding: 48px 20px;
+  min-height: 171px;
+  background: rgb(42, 58, 74) url("../img/back-mobile@1x.jpg") no-repeat 0 -70px;
+}
+
+.page-header__caption--bg-position {
+  background: rgb(42, 58, 74) url("../img/back-mobile@1x.jpg") no-repeat 0 0;
+}
+
+.page-header--bg-transparent {
+  background-color: transparent;
+  background: rgb(42, 58, 74) url("../img/back-mobile@1x.jpg") no-repeat;
 }
