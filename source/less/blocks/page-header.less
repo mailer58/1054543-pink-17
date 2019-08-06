@@ -5,21 +5,15 @@
   z-index: 0;
 }
 
-.background-header-index-page {
+.page-header--index {
   z-index: 5;
   position: relative;
   min-height: 462px;
   background: rgb(42, 58, 74) url("../img/back-mobile@1x.jpg") no-repeat;
 }
 
-.background-header-index-page--position {
-  background: rgb(42, 58, 74) url("../img/back-mobile@1x.jpg") no-repeat 0 -64px;
-}
-
-.background-header-child-page {
-  z-index: 30;
-  min-height: 235px;
-  background: rgb(42, 58, 74) url("../img/back-mobile@1x.jpg") no-repeat;
+.page-header--index-position {
+  background-position: 0 -64px;
 }
 
 .page-header__strip::before {
@@ -34,7 +28,7 @@
   z-index: -1;
 }
 
-.background-header-index-page::after {
+.page-header--index::after {
   content: "";
   position: absolute;
   display: block;
@@ -53,8 +47,6 @@
 }
 
 .page-header__logo-container--disable-border {
-  padding: 21px 20px 12px;
-  z-index: -100;
   border-bottom: none;
 }
 
@@ -86,11 +78,8 @@
   background: rgb(42, 58, 74) url("../img/back-mobile@1x.jpg") no-repeat 0 -70px;
 }
 
-.page-header__caption--bg-position {
-  background: rgb(42, 58, 74) url("../img/back-mobile@1x.jpg") no-repeat 0 0;
-}
-
 .page-header--bg-transparent {
-  background-color: transparent;
-  background: rgb(42, 58, 74) url("../img/back-mobile@1x.jpg") no-repeat;
+
+  background-image: url("../img/back-mobile@1x.jpg");
+  background-repeat: no-repeat;
 }

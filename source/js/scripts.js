@@ -17,7 +17,7 @@
   var toggle = document.getElementById("menuToggle");
   var mainNav = document.querySelector(".site-list");
   var pageHeader = document.querySelector(".page-header");
-  var bgHeaderIndexPagePosition = document.querySelector(".background-header-index-page");
+  var bgHeaderIndexPagePosition = document.querySelector(".page-header--index");
   var bgHeaderChildPagePosition = document.querySelector(".page-header__caption");
   var toggleEnable = document.querySelector(".page-header__main-nav-toggle");
   var pageHeaderLogoContainer = document.querySelector(".page-header__logo-container");
@@ -44,9 +44,7 @@
 
   window.onload = function() {
     if (fileName === "index.html") {
-      bgHeaderIndexPagePosition.classList.add("background-header-index-page--position");
-    } else {
-      bgHeaderChildPagePosition.classList.add(".page-header__caption--bg-position");
+      bgHeaderIndexPagePosition.classList.add("page-header--index-position");
     }
 
     toggle.addEventListener("click", function(evt) {
