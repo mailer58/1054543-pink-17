@@ -1,0 +1,42 @@
+.main-nav {
+  width: 320px;
+  z-index: 50;
+
+  a {
+    color: @white;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    text-transform: uppercase;
+  }
+
+  a:hover {
+    color: @pink;
+  }
+
+  a:active {
+    color: @pink-opacity;
+  }
+}
+
+.main-nav__list {
+  .list-reset();
+  display: block;
+  z-index: 100;
+}
+
+.main-nav__list--disable {
+  display: none;
+}
+
+.main-nav__list--show {
+  display: block;
+  position: absolute;
+  top: 64px;
+  width: 320px;
+}
+
+.main-nav .site-list__link-active:hover,
+.main-nav .site-list__link-active:active {
+  color: @white;
+}
