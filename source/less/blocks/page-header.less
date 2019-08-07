@@ -5,17 +5,6 @@
   z-index: 0;
 }
 
-.page-header--index {
-  z-index: 5;
-  position: relative;
-  min-height: 462px;
-  background: rgb(42, 58, 74) url("../img/back-mobile@1x.jpg") no-repeat;
-}
-
-.page-header--index-position {
-  background-position: 0 -64px;
-}
-
 .page-header__strip::before {
   content: "";
   display: block;
@@ -26,18 +15,6 @@
   left: 0;
   top: 0;
   z-index: -1;
-}
-
-.page-header--index::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 258px;
-  height: 286px;
-  background: url("../img/iphone-hand-mobile@1x.png") no-repeat;
-  left: 0;
-  top: 176px;
-  z-index: 1;
 }
 
 .page-header__logo-container {
@@ -78,8 +55,14 @@
   background: rgb(42, 58, 74) url("../img/back-mobile@1x.jpg") no-repeat 0 -70px;
 }
 
-.page-header--bg-transparent {
+.page-header--bg {
+  min-height: 462px;
+  background: rgb(29, 38, 49) url("../img/back-mobile@1x.jpg") no-repeat;
+  z-index: 1;
+  position: relative;
+}
 
+.page-header--bg-strip {
   background-image: url("../img/back-mobile@1x.jpg");
   background-repeat: no-repeat;
 }

@@ -17,7 +17,7 @@
   var toggle = document.getElementById("menuToggle");
   var mainNav = document.querySelector(".site-list");
   var pageHeader = document.querySelector(".page-header");
-  var bgHeaderIndexPagePosition = document.querySelector(".page-header--index");
+  var bgDownload = document.getElementById("download");
   var bgHeaderChildPagePosition = document.querySelector(".page-header__caption");
   var toggleEnable = document.querySelector(".page-header__main-nav-toggle");
   var pageHeaderLogoContainer = document.querySelector(".page-header__logo-container");
@@ -36,7 +36,7 @@
   crossOpacity = new Image();
   crossOpacity.src = "img/icon-menu-cross-opacity.svg";
 
-  pageHeader.classList.add("page-header--bg-transparent");
+  pageHeader.classList.add("page-header--bg-strip");
   toggleEnable.classList.add("page-header__main-nav-toggle--show-content");
   mainNav.classList.add("main-nav__list--disable");
   pageHeader.classList.add("page-header__strip");
@@ -44,7 +44,9 @@
 
   window.onload = function() {
     if (fileName === "index.html") {
-      bgHeaderIndexPagePosition.classList.add("page-header--index-position");
+      bgDownload.classList.remove("download--bg");
+      pageHeader.classList.add("page-header--bg");
+      bgDownload.classList.add("download--padding-update");
     }
 
     toggle.addEventListener("click", function(evt) {

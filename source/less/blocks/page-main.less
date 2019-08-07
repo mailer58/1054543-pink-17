@@ -1,6 +1,26 @@
-/*
 .page-main {
   width: 320px;
-  padding: 20px;
 }
-*/
+
+.page-main--index {
+  z-index: 500;
+  position: relative;
+  min-height: 462px;
+  background: url("../img/back-mobile@1x.jpg") no-repeat;
+}
+
+.page-main--index-position {
+  background-position: 0 -64px;
+}
+
+.page-main--index::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 258px;
+  height: 286px;
+  background: url("../img/iphone-hand-mobile@1x.png") no-repeat;
+  left: 0;
+  top: 176px;
+  z-index: 1;
+}
