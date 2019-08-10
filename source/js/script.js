@@ -22,6 +22,12 @@
   var toggleEnable = document.querySelector(".page-header__main-nav-toggle");
   var pageHeaderLogoContainer = document.querySelector(".page-header__logo-container");
   var fileName = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+  var downloadWrapper = document.querySelector(".download__wrapper");
+  var tablet = window.matchMedia("(min-width: 660px)");
+  var desktop = window.matchMedia("(min-width: 1200px)");
+  var mobile = window.matchMedia("(min-width: 320px)");
+  var pageMain = document.querySelector(".page-main--bg-index");
+  var pageHeaderWrapper = document.querySelector(".page-header__wrapper-enable");
 
   logoPinkRoseMobile = new Image();
   logoPinkRoseMobile.src = "img/logo-pink-rose-mobile.svg";
@@ -36,18 +42,42 @@
   crossOpacity = new Image();
   crossOpacity.src = "img/icon-menu-cross-opacity.svg";
 
-  pageHeader.classList.add("page-header--bg-strip");
+  function mediaTablet(tablet) {
+  if (tablet.matches) { // If media query matches
+    downloadWrapper.classList.add("download__wrapper--tablet");
+    document.body.style.backgroundColor = "yellow";
+  }
+};
+
+  function mediaMobile(mobile) {
+  if (mobile.matches) { // If media query matches
+    downloadWrapper.classList.remove("download__wrapper--tablet");
+    document.body.style.backgroundColor = "pink";
+  }
+};
+
+
+
+
   toggleEnable.classList.add("page-header__main-nav-toggle--show-content");
   mainNav.classList.add("main-nav__list--disable");
   pageHeader.classList.add("page-header__strip");
+  pageHeaderLogoContainer.classList.add("page-header__logo-container-disable");
+  pageHeader.classList.remove("page-header--bg-index-desktop");
+
   pageHeaderLogoContainer.classList.add("page-header__logo-container--disable-border");
+
 
   window.onload = function() {
     if (fileName === "index.html") {
-      bgDownload.classList.remove("download--bg");
-      pageHeader.classList.add("page-header--bg");
-      bgDownload.classList.add("download--padding-update");
-    }
+     downloadWrapper.classList.add("download__wrapper--up");
+     pageMain.classList.remove("page-main--bg-index");
+     pageHeader.classList.add("page-header--bg-index");
+     pageHeaderLogoContainer.classList.add("page-header__logo-container--slogan");
+
+   } else {
+      pageHeader.classList.add("page-header--bg-strip");
+   }
 
     toggle.addEventListener("click", function(evt) {
       evt.preventDefault();

@@ -1,40 +1,26 @@
+
 .download {
+  min-width: 320px;
+  padding-top: 28px;
   background-color: @bluish-dark;
-    padding-bottom: 25px;
-}
-
-
-.download--bg {
-  padding-top: 487px;
-  min-height: 462px;
-  background: rgb(29, 38, 49) url("../img/back-mobile@1x.jpg") no-repeat;
+  padding-bottom: 28px;
+  z-index: 100;
   position: relative;
-}
-
-.download--bg::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 258px;
-  height: 286px;
-  background: url("../img/iphone-hand-mobile@1x.png") no-repeat;
-  left: 0;
-  top: 176px;
-  z-index: 1;
-}
-
-.download--padding-update {
-padding-top: 25px;
 }
 
 .download__list {
   .list-reset();
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 33px;
+  margin-bottom: 31px;
 }
 
 .download__button {
   border: 3px @white solid;
   color: @white;
-  margin-bottom: 28px;
+  margin-bottom: 44px;
 }
 
 .download__button:hover {
@@ -51,5 +37,72 @@ padding-top: 25px;
   text-align: center;
   font-weight: 300;
   max-width: 280px;
-  margin: 0;
+  margin: 0 auto;
+}
+
+.download__wrapper {
+  position: relative;
+  width: 280px;
+  z-index: 5;
+}
+
+@media (min-width: @tablet-width) {
+  .download {
+    width: @tablet-width;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .download__wrapper {
+    position: absolute;
+    top: 400px;
+    z-index: 2;
+    width: 300px;
+  }
+
+  .download__wrapper::before {
+    content: "Взгляните на жизнь иначе!";
+    position: absolute;
+    z-index: -100;
+    color: @white;
+    font-size: 40px;
+    font-weight: 300;
+    display: block;
+    width: 200px;
+    line-height: 48px;
+    text-align: center;
+    top: -160px;
+    left: 40px;
+  }
+
+    .download__wrapper--up {
+      top: -350px;
+    }
+    .download__wrapper--up::before {
+      content: "";
+    }
+
+}
+
+@media (min-width: @desktop-width) {
+  .download {
+    width: @desktop-width;
+}
+  .download__wrapper {
+    top: -400px;
+    left: 120px
+  }
+}
+
+/* additional js styles */
+.download--padding-reset {
+  padding-top: 0;
+}
+
+.download__wrapper--tablet {
+  top: -250px;
+}
+
+.download--padding-update {
+  padding-top: 28px;
 }
