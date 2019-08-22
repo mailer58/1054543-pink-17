@@ -71,7 +71,7 @@ console.log(mainNav);
     if (fileName === "index.html") {
       downloadWrapper.classList.add("download__wrapper--up");
       pageHeader.classList.add("page-header--bg-index-js");
-      pageHeaderSlogan.classList.add("page-header__slogan--js-mod");
+      //pageHeaderSlogan.classList.add("page-header__slogan--js-mod");
     } else {
       pageHeaderCaption.classList.add("page-header__caption--js-bg-disable");
       pageHeader.classList.add("page-header--bg-inner-js");
