@@ -9,8 +9,8 @@
   position: relative;
   z-index: 2;
 }
-
 /* adding background for header with js */
+
 .page-header--bg-index-js {
   min-height: 462px;
   background-color: @bluish;
@@ -30,8 +30,8 @@
   left: 0;
   bottom: 0;
 }
-
 /* adding opacity strip for header with js */
+
 .page-header__strip::before {
   content: "";
   display: block;
@@ -53,8 +53,8 @@
   background: none;
   height: 70px;
 }
-
 /* js class */
+
 .page-header__logo-container--disable-border {
   border-bottom: none;
 }
@@ -68,15 +68,15 @@
   width: 50px;
   height: 24px;
 }
-
 /* js class */
+
 .page-header__main-nav-toggle--show-content {
   display: inline-block;
 }
 
 .page-header__slogan {
   margin: 0 auto;
-  padding: 24px 20px 0 20px;
+  padding: 24px 20px 0;
   font-size: 24px;
   line-height: 29px;
   font-weight: 300;
@@ -97,7 +97,7 @@
   height: 286px;
   background: url("../img/iphone-hand-mobile@1x.png") no-repeat;
   left: 0;
-  bottom: 0px;
+  bottom: 0;
 }
 
 .page-header__slogan--js-mod {
@@ -105,8 +105,8 @@
   min-height: auto;
   padding-top: 19px;
 }
-
 /* adding background for header on inner pages */
+
 .page-header__caption {
   text-align: center;
   color: @white;
@@ -114,13 +114,13 @@
   line-height: 29px;
   font-weight: 300;
   margin: 0 auto;
-  padding: 31px 20px 0 20px;
+  padding: 31px 20px 0;
   min-height: 172px;
   background: rgb(42, 58, 74) url("../img/bg-back-mobile@1x.jpg") no-repeat;
   background-position: 0 -65px;
 }
 
-.page-header__caption--js-bg-disable  {
+.page-header__caption--js-bg-disable {
   background: none;
 }
 
@@ -128,7 +128,6 @@
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
 }
-
 @media (min-width: @tablet-width) {
   .page-header {
     width: @tablet-width;
@@ -195,15 +194,15 @@
 
   .page-header__slogan--js-mod {
     background: none;
-    padding: 0;
-    padding-top: 93px;
-    padding-left: 50px;
+    padding: 93px 0 0 50px;
     width: 290px;
     height: auto;
   }
+
   .page-header__slogan--js-mod::before {
     background: none;
   }
+
   .page-header__caption {
     padding-top: 69px;
     font-size: 50px;
@@ -212,7 +211,8 @@
     background-position: -270px -110px;
     min-height: 330px;
   }
-  .page-header__caption--js-bg-disable  {
+
+  .page-header__caption--js-bg-disable {
     background: none;
   }
 
@@ -222,7 +222,6 @@
     background-position: -270px 0;
   }
 }
-
 @media (min-width: @desktop-width) {
   .page-header {
     width: @desktop-width;
@@ -258,7 +257,6 @@
     min-height: 853px;
   }
 
-
   .page-header__wrapper {
     display: flex;
     width: 940px;
@@ -267,7 +265,6 @@
     position: relative;
     padding-bottom: 16px;
   }
-
   /* opacity block without js*/
   .page-header__logo-container::after {
     content: "";
@@ -281,7 +278,6 @@
     top: 0;
     z-index: -1;
   }
-
   /* disable no-js style */
   .page-header__logo-container--disable-opacity {}
 
@@ -299,7 +295,6 @@
     width: auto;
     height: auto;
   }
-
 
   .page-header__logo-image {
     margin-top: 27px;

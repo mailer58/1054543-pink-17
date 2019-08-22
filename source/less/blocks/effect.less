@@ -1,7 +1,6 @@
 .effect {
   display: none;
 }
-
 @media (min-width: @tablet-width) {
   .effect {
     display: block;
@@ -36,7 +35,7 @@
     font-size: 96px;
     line-height: 150px;
     font-weight: 700;
-    top:134px;
+    top: 134px;
     left: 83px;
   }
 
@@ -47,68 +46,71 @@
     line-height: 36px;
     width: 200px;
   }
-.effect__caption:nth-child(2) {
-  margin-bottom: 10px;
-}
+
+  .effect__caption:nth-child(2) {
+    margin-bottom: 10px;
+  }
 
   .effect__text {
-    margin: 0;
-    margin-bottom: 11px;
+    margin: 0 0 11px;
     width: 300px;
   }
+
   .effect__link {
     color: @pink;
     text-decoration: underline;
   }
 }
-  @media (min-width: @desktop-width) {
-    .effect {
-      background-color: @gray;
-      width: @desktop-width;
-      padding-top: 123px;
-      padding-left: 496px;
-    }
+@media (min-width: @desktop-width) {
+  .effect {
+    background-color: @gray;
+    width: @desktop-width;
+    padding-top: 123px;
+    padding-left: 496px;
+  }
 
-     .effect::before {
-       background-image: url("../img/icon-timer-desktop.svg");
-       left: 87px;
-       top: 28px;
-       width: 540px;
-       height: 445px;
-     }
+  .effect::before {
+    background-image: url("../img/icon-timer-desktop.svg");
+    left: 87px;
+    top: 28px;
+    width: 540px;
+    height: 445px;
+  }
 
-     .effect::after {
-       font-size: 120px;
-       line-height: 187px;
-       left: 210px;
-       top: 125px;
-     }
+  .effect::after {
+    font-size: 120px;
+    line-height: 187px;
+    left: 210px;
+    top: 125px;
+  }
 
-   .effect__wrapper {
-     display: flex;
-     flex-direction: row;
-     justify-content: flex-start;
-     width: 570px;
-     margin-bottom: 15px;
-   }
+  .effect__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 570px;
+    margin-bottom: 15px;
+  }
 
-   .effect__caption {
-     line-height: 30px;
-   }
-   .effect__caption:nth-child(1) {
-     width: auto;
-     margin-right: 8px;
-   }
+  .effect__caption {
+    line-height: 30px;
+  }
 
-   .effect__text {
-     margin: 0;
-     font-size: 18px;
-     line-height: 30px;
-     width: 550px;
-     margin-bottom: 30px;
-   }
-   .effect__link {
-     font-size: 18px;
-     line-height: 30px;
-   }
+  .effect__caption:nth-child(1) {
+    width: auto;
+    margin-right: 8px;
+  }
+
+  .effect__text {
+    margin: 0;
+    font-size: 18px;
+    line-height: 30px;
+    width: 550px;
+    margin-bottom: 30px;
+  }
+
+  .effect__link {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }

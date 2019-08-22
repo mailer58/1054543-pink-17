@@ -1,7 +1,7 @@
 .features {
   padding-top: 40px;
   background-color: @white;
-  margin: 0  auto;
+  margin: 0 auto;
 }
 
 .features__header {
@@ -27,7 +27,7 @@
   .list-reset();
   position: relative;
   background-color: @gray;
-  padding: 50px 20px 0 20px;
+  padding: 50px 20px 0;
 }
 
 .features__list::before {
@@ -44,7 +44,7 @@
 
 .features__item {
   text-align: center;
-  margin: 0 auto 33px auto;
+  margin: 0 auto 33px;
   position: relative;
 }
 
@@ -83,7 +83,6 @@
   bottom: 0;
   left: 61px;
 }
-
 @media (min-width: @tablet-width) {
   .features {
     padding-top: 50px;
@@ -99,56 +98,57 @@
     line-height: 48px;
   }
 
-   .features__caption--margin {
-     width: 600px;
-     margin-bottom: 0;
-   }
+  .features__caption--margin {
+    width: 600px;
+    margin-bottom: 0;
+  }
 
-   .features__caption--margin2 {
-     width: 355px;
-   }
+  .features__caption--margin2 {
+    width: 355px;
+  }
 
-   .features__list {
-     padding-left: 328px;
-     padding-top: 25px;
-   }
+  .features__list {
+    padding-left: 328px;
+    padding-top: 25px;
+  }
 
-   .features__list::before {
-     top: -50px;
-     background-image: url("../img/bg-triangle-tablet.svg");
-     width: 660px;
-     height: 50px;
-   }
-   .features__title {
-      text-align: left;
-   }
+  .features__list::before {
+    top: -50px;
+    background-image: url("../img/bg-triangle-tablet.svg");
+    width: 660px;
+    height: 50px;
+  }
 
-   .features__description {
-     text-align: left;
-     width: 310px;
-   }
-   .features__item {
-     width: 310px;
-   }
+  .features__title {
+    text-align: left;
+  }
 
+  .features__description {
+    text-align: left;
+    width: 310px;
+  }
 
-   .features__item:nth-child(1),
-   .features__item:nth-child(2) {
-     margin-bottom: 36px;
-   }
+  .features__item {
+    width: 310px;
+  }
 
-   .features__item:nth-child(3) {
-     padding-bottom: 44px;
-   }
-   .features__item:nth-child(3)::before {
-     background-image: url("../img/iphone-screen-3-tablet@1x.png");
-     width: 268px;
-     height: 481px;
-     bottom: 0;
-     left: -309px;
-   }
+  .features__item:nth-child(1),
+  .features__item:nth-child(2) {
+    margin-bottom: 36px;
+  }
+
+  .features__item:nth-child(3) {
+    padding-bottom: 44px;
+  }
+
+  .features__item:nth-child(3)::before {
+    background-image: url("../img/iphone-screen-3-tablet@1x.png");
+    width: 268px;
+    height: 481px;
+    bottom: 0;
+    left: -309px;
+  }
 }
-
 @media (min-width: @desktop-width) {
   .features {
     width: @desktop-width;
@@ -160,7 +160,7 @@
     margin-bottom: 172px;
   }
 
-  .features__caption  {
+  .features__caption {
     font-size: 50px;
     line-height: 60px;
   }
@@ -174,7 +174,7 @@
   }
 
   .features__list {
-    padding: 262px 161px 0px 161px;
+    padding: 262px 161px 0;
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -208,9 +208,9 @@
   }
 
   .features__item:nth-child(2) {
-     position: relative;
-       padding-bottom: 0;
-   }
+    position: relative;
+    padding-bottom: 0;
+  }
 
   .features__item:nth-child(2)::before {
     content: "";
@@ -224,32 +224,32 @@
   }
 
   .features__item:nth-last-child(1) {
-     position: relative;
-   }
+    position: relative;
+  }
 
-   .features__item:nth-child(1)::before {
-     content: "";
-     position: absolute;
-     display: block;
-     background-image: url("../img/iphone-screen-1-desktop@1x.png");
-     width: 292px;
-     height: 302px;
-     left: -27px;
-     bottom: 261px;
-   }
+  .features__item:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url("../img/iphone-screen-1-desktop@1x.png");
+    width: 292px;
+    height: 302px;
+    left: -27px;
+    bottom: 261px;
+  }
 
-   .features__list::before {
-     top: -92px;
-     background-image: url("../img/bg-triangle-desktop.svg");
-     width: 1200px;
-     height: 92px;
-   }
-   .features__title {
-     font-size: 30px;
-     line-height: 30px;
-     width: 235px;
-     text-align: center;
-     margin: 0 auto;
-     margin-bottom: 25px;
-   }
+  .features__list::before {
+    top: -92px;
+    background-image: url("../img/bg-triangle-desktop.svg");
+    width: 1200px;
+    height: 92px;
+  }
+
+  .features__title {
+    font-size: 30px;
+    line-height: 30px;
+    width: 235px;
+    text-align: center;
+    margin: 0 auto 25px;
+  }
 }
