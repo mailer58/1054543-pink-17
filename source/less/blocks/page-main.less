@@ -3,61 +3,16 @@
   width: 320px;
   position: relative;
   background-color: @bluish-dark;
-  z-index: 10;
-}
-
-.page-main--bg-index {
-  padding-top: 462px;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  position: relative;
-  z-index:0;
-}
-
-.page-main--bg-index::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 258px;
-  height: 286px;
-  background: url("../img/iphone-hand-mobile@1x.png") no-repeat;
-  left: 0;
-  top: 176px;
-  z-index: 1;
 }
 
 @media (min-width: @tablet-width) {
   .page-main {
     width: @tablet-width;
   }
-  .page-main--bg-index {
-    padding-top: 729px;
-    background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-position: -265px 0;
-  }
-
-  .page-main--bg-index::after {
-    background-image: url("../img/iphone-hand-tablet@1x.png");
-    width: 700px;
-    height: 545px;
-    top: 184px;
-    left: -20px;
-  }
 }
-
 
 @media (min-width: @desktop-width) {
   .page-main {
     width: @desktop-width;
-  }
-  .page-main--bg-index {
-    padding-top: 0;
-    background: none;
-  }
-  .page-main--bg-index::after {
-    background: none;
-    width: 0;
-    height: 0;
   }
 }

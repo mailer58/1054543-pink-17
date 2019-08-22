@@ -9,7 +9,7 @@
 
   <body>
 
-    <header class="page-header page-header--bg-index-desktop">
+    <header class="page-header page-header--bg-index-desktop-no-js">
       <div class="page-header__wrapper">
         <div class="page-header__logo-container">
           <a class="page-header__logo-link">
@@ -29,20 +29,18 @@
               <a href="competition.html">Конкурс</a>
             </li>
             <li class="site-list__item">
-              <a href="#" target="_blank">Html academy</a>
+              <a href="#" target="_blank">HTML Academy</a>
             </li>
           </ul>
         </nav>
       </div>
-      <div class="page-header__wrapper2">
-        <p class="page-header__slogan">Взгляните на жизнь иначе!</p>
-      </div>
+      <h2 class="page-header__slogan">Взгляните на жизнь иначе!</h2>
     </header>
-    <main class="page-main page-main--bg-index">
+    <main class="page-main">
       <h1 class="visually-hidden">
         Пинк - сайт фотоприложения для раскрашивания серых будней
       </h1>
-      <section class="download container" id="download">
+      <section class="download" id="download">
         <h2 class="visually-hidden">
           Фотоприложения для различных операционных систем
         </h2>
@@ -53,17 +51,17 @@
           <ul class="download__list">
             <li class="download__item">
               <a class="download__link" href="https://www.apple.com/itunes/download/pink">
-                <img class="download__img" src="img/apple-logo.png" width="47" height="56" alt="Логотип Apple">
+                <img class="download__img" src="img/logo-apple.svg" width="47" height="57" alt="Логотип Apple">
               </a>
             </li>
             <li class="download__item">
               <a class="download__link" href="https://play.google.com/store/apps/details?id=com.pink">
-                <img class="download__img" src="img/android-logo.png" width="43" height="47" alt="Логотип Android">
+                <img class="download__img" src="img/logo-android.svg" width="42" height="47" alt="Логотип Android">
               </a>
             </li>
             <li class="download__item">
               <a class="download__link" href="https://www.microsoft.com/ru-ru/p/pink">
-                <img class="download__img" src="img/microsoft-logo.png" width="44" height="41" alt="Логотип Windows">
+                <img class="download__img" src="img/logo-microsoft.svg" width="44" height="42" alt="Логотип Windows">
               </a>
             </li>
           </ul>
@@ -76,7 +74,7 @@
         <h2 class="visually-hidden">
           Особенности приложения
         </h2>
-        <header class="features__header container">
+        <header class="features__header">
           <p class="features__caption features__caption--margin">
             Устали от серости мегаполиса?
           </p>
@@ -84,8 +82,8 @@
             Нам есть, что вам предложить!
           </p>
         </header>
-        <ul class="features__list container">
-          <li class="features__item features__item--padding-top">
+        <ul class="features__list">
+          <li class="features__item">
             <b class="features__title">
               Поднимает настроение
             </b>
@@ -110,9 +108,16 @@
             </p>
           </li>
         </ul>
-        <div class="features__container">
-          <img class="features__photo" src="img/iphone-screen1-mobile@1x.png" width="159" height="277" id="iphone-screen-mobile" alt="Smile">
+      </section>
+      <section class="effect">
+        <div class="effect__wrapper">
+          <h2 class="effect__caption">Эффект</h2>
+          <h2 class="effect__caption">на 24 часа!</h2>
         </div>
+        <p class="effect__text">Британские ученые провели исследования и доказали,
+          что положительный эффект от использования приложения длится целые сутки!
+        </p>
+        <a class="effect__link" href="#">Узнать больше об исследовании</a>
       </section>
     </main>
     <script src="js/scripts.js"></script>

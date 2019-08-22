@@ -16,9 +16,10 @@
   var currentToggle = 0;
   var toggle = document.getElementById("menuToggle");
   var mainNav = document.querySelector(".site-list");
+  var pageHeaderSlogan = document.querySelector(".page-header__slogan");
   var pageHeader = document.querySelector(".page-header");
   var bgDownload = document.getElementById("download");
-  var bgHeaderChildPagePosition = document.querySelector(".page-header__caption");
+  var pageHeaderCaption = document.querySelector(".page-header__caption");
   var toggleEnable = document.querySelector(".page-header__main-nav-toggle");
   var pageHeaderLogoContainer = document.querySelector(".page-header__logo-container");
   var fileName = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
@@ -28,6 +29,7 @@
   var mobile = window.matchMedia("(min-width: 320px)");
   var pageMain = document.querySelector(".page-main--bg-index");
   var pageHeaderWrapper = document.querySelector(".page-header__wrapper-enable");
+  var menuOpen = false;
 
   logoPinkRoseMobile = new Image();
   logoPinkRoseMobile.src = "img/logo-pink-rose-mobile.svg";
@@ -42,47 +44,48 @@
   crossOpacity = new Image();
   crossOpacity.src = "img/icon-menu-cross-opacity.svg";
 
-  function mediaTablet(tablet) {
-  if (tablet.matches) { // If media query matches
-    downloadWrapper.classList.add("download__wrapper--tablet");
-    document.body.style.backgroundColor = "yellow";
-  }
-};
-
-  function mediaMobile(mobile) {
-  if (mobile.matches) { // If media query matches
-    downloadWrapper.classList.remove("download__wrapper--tablet");
-    document.body.style.backgroundColor = "pink";
-  }
-};
-
-
-
+  function mediaDesktop(desktop) {
+    if (desktop.matches && menuOpen == true) {
+      mainNav.classList.remove("main-nav__list--show");
+      mainNav.classList.remove("main-nav__list--disable");
+    } else if (menuOpen == true){
+      mainNav.classList.add("main-nav__list--disable");
+      mainNav.classList.add("main-nav__list--show");
+    }
+  };
 
   toggleEnable.classList.add("page-header__main-nav-toggle--show-content");
   mainNav.classList.add("main-nav__list--disable");
   pageHeader.classList.add("page-header__strip");
-  pageHeaderLogoContainer.classList.add("page-header__logo-container-disable");
-  pageHeader.classList.remove("page-header--bg-index-desktop");
-
+  pageHeaderLogoContainer.classList.add("page-header__logo-container--disable-opacity");
   pageHeaderLogoContainer.classList.add("page-header__logo-container--disable-border");
 
 
+  mediaDesktop(desktop);
+  desktop.addListener(mediaDesktop);
+
+console.log("Исходно: ");
+console.log(mainNav);
+
   window.onload = function() {
     if (fileName === "index.html") {
-     downloadWrapper.classList.add("download__wrapper--up");
-     pageMain.classList.remove("page-main--bg-index");
-     pageHeader.classList.add("page-header--bg-index");
-     pageHeaderLogoContainer.classList.add("page-header__logo-container--slogan");
-
-   } else {
-      pageHeader.classList.add("page-header--bg-strip");
-   }
+      downloadWrapper.classList.add("download__wrapper--up");
+      pageHeader.classList.add("page-header--bg-index-js");
+      pageHeaderSlogan.classList.add("page-header__slogan--js-mod");
+    } else {
+      pageHeaderCaption.classList.add("page-header__caption--js-bg-disable");
+      pageHeader.classList.add("page-header--bg-inner-js");
+    }
 
     toggle.addEventListener("click", function(evt) {
       evt.preventDefault();
+      if (menuOpen==true) {
+        menuOpen = false;
+      } else {
+        menuOpen = true;
+      }
       mainNav.classList.toggle("main-nav__list--show");
-      mainNav.classList.toggle("main-nav__list--position");
+      console.log(menuOpen);
       console.log(mainNav);
       currentToggle++;
       if (currentToggle == togglesArray.length) {

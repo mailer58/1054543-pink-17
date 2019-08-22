@@ -1,6 +1,4 @@
 .main-nav {
-  z-index: 5000;
-
   a {
     color: @white;
     font-weight: 700;
@@ -21,7 +19,7 @@
 .main-nav__list {
   .list-reset();
   display: block;
-  z-index: 100000;
+  position: relative;
 }
 
 .main-nav__list--disable {
@@ -45,6 +43,8 @@
   }
 
   .main-nav__list--show {
+    display: block;
+    position: absolute;
     width: @tablet-width;
     top: 110px;
   }
@@ -52,6 +52,7 @@
 
 @media (min-width: @desktop-width) {
   .main-nav {
+    width: 621px;
     a {
       text-transform: none;
       line-height: 18px;
@@ -63,8 +64,13 @@
     position: relative;
     justify-content: space-between;
     display: flex;
-    padding-top: 47px;
+    padding-top: 44px;
     flex-wrap: wrap;
+    flex-direction: row;
   }
 
+  .main-nav__list--show {
+    position: relative;
+    display: none;
+  }
 }

@@ -1,11 +1,17 @@
-
 .download {
-  min-width: 320px;
+  margin: 0 auto;
+  width: 320px;
+  min-height: 271px;
   padding-top: 28px;
   background-color: @bluish-dark;
   padding-bottom: 28px;
-  z-index: 100;
   position: relative;
+}
+
+.download__wrapper {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
 }
 
 .download__list {
@@ -13,14 +19,15 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 0 33px;
-  margin-bottom: 31px;
+  width: 205px;
+  margin: 0 auto;
+  margin-bottom: 16px;
 }
 
 .download__button {
   border: 3px @white solid;
   color: @white;
-  margin-bottom: 44px;
+  margin-bottom: 30px;
 }
 
 .download__button:hover {
@@ -40,47 +47,39 @@
   margin: 0 auto;
 }
 
-.download__wrapper {
-  position: relative;
-  width: 280px;
-  z-index: 5;
-}
-
 @media (min-width: @tablet-width) {
   .download {
     width: @tablet-width;
     padding-top: 0;
     padding-bottom: 0;
+    min-height: auto;
   }
 
   .download__wrapper {
     position: absolute;
-    top: 400px;
-    z-index: 2;
+    display: block;
+    top: -352px;
+    right: 340px;
     width: 300px;
   }
 
-  .download__wrapper::before {
-    content: "Взгляните на жизнь иначе!";
-    position: absolute;
-    z-index: -100;
-    color: @white;
-    font-size: 40px;
-    font-weight: 300;
-    display: block;
-    width: 200px;
-    line-height: 48px;
-    text-align: center;
-    top: -160px;
-    left: 40px;
+  .download__wrapper--up {
+    top: -351px;
+    left: 20px;
   }
 
-    .download__wrapper--up {
-      top: -350px;
-    }
-    .download__wrapper--up::before {
-      content: "";
-    }
+  .download__button {
+    margin-bottom: 45px;
+  }
+
+  .download__list {
+    margin-bottom: 31px;
+  }
+
+  .download__text {
+  max-width: 300px;
+  font-size: 18px;
+}
 
 }
 
@@ -91,6 +90,17 @@
   .download__wrapper {
     top: -400px;
     left: 120px
+  }
+
+  .download__wrapper--up {
+    top: -404px;
+    left: 130px;
+  }
+  .download__button {
+    margin-bottom: 65px;
+  }
+  .download__list {
+    margin-bottom: 51px;
   }
 }
 
