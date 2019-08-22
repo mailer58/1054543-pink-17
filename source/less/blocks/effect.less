@@ -1,6 +1,7 @@
 .effect {
   display: none;
 }
+
 @media (min-width: @tablet-width) {
   .effect {
     display: block;
@@ -25,12 +26,10 @@
 
   .effect::after {
     content: "24";
-    font-size: 34px;
     position: absolute;
     display: block;
     width: 100px;
     height: 100px;
-    left: 0;
     color: @pink;
     font-size: 96px;
     line-height: 150px;
@@ -61,6 +60,7 @@
     text-decoration: underline;
   }
 }
+
 @media (min-width: @desktop-width) {
   .effect {
     background-color: @gray;

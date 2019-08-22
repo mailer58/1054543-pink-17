@@ -128,6 +128,7 @@
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
 }
+
 @media (min-width: @tablet-width) {
   .page-header {
     width: @tablet-width;
@@ -222,6 +223,7 @@
     background-position: -270px 0;
   }
 }
+
 @media (min-width: @desktop-width) {
   .page-header {
     width: @desktop-width;
@@ -278,9 +280,8 @@
     top: 0;
     z-index: -1;
   }
-  /* disable no-js style */
-  .page-header__logo-container--disable-opacity {}
 
+  /* disable no-js style */
   .page-header__logo-container--disable-opacity::after {
     display: none;
   }
