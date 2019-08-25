@@ -1,7 +1,6 @@
 .page-header {
   margin: 0 auto;
   position: relative;
-  width: 320px;
   background-color: @bluish;
 }
 
@@ -16,27 +15,17 @@
   background-color: @bluish;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center 0;
   position: relative;
 }
 
-.page-header--bg-index-js::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 258px;
-  height: 286px;
-  background: url("../img/iphone-hand-mobile@1x.png") no-repeat;
-  left: 0;
-  bottom: 0;
-}
 /* adding opacity strip for header with js */
 
 .page-header__strip::before {
   content: "";
   display: block;
   position: absolute;
-  width: 320px;
+  width: 100%;
   height: 66px;
   background-color: @black-opacity;
   left: 0;
@@ -74,7 +63,29 @@
   display: inline-block;
 }
 
+.page-header__slogan-wrapper-float {
+  width: 100%;
+  min-height: 396px;
+  position: relative;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
+.page-header__slogan-wrapper-float--js-mod {
+  background: none;
+  width: auto;
+  min-height: auto;
+}
+
+.page-header__slogan-wrapper-fixed {
+  width: 320px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .page-header__slogan {
+  position: relative;
   margin: 0 auto;
   padding: 24px 20px 0;
   font-size: 24px;
@@ -82,14 +93,10 @@
   font-weight: 300;
   color: @white;
   width: 320px;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
   text-align: center;
-  min-height: 396px;
 }
 
-.page-header__slogan::before {
+.page-header__slogan-wrapper-fixed::before {
   content: "";
   position: absolute;
   display: block;
@@ -97,12 +104,12 @@
   height: 286px;
   background: url("../img/iphone-hand-mobile@1x.png") no-repeat;
   left: 0;
-  bottom: 0;
+  bottom: -315px;
 }
 
+
+/* changing position of page-header__slogan */
 .page-header__slogan--js-mod {
-  background: none;
-  min-height: auto;
   padding-top: 19px;
 }
 /* adding background for header on inner pages */
@@ -117,25 +124,25 @@
   padding: 31px 20px 0;
   min-height: 172px;
   background: rgb(42, 58, 74) url("../img/bg-back-mobile@1x.jpg") no-repeat;
-  background-position: 0 -65px;
+  background-position: center -65px;
 }
 
 .page-header__caption--js-bg-disable {
   background: none;
+  padding: 26px 20px 0;
+  min-height: auto;
 }
 
 .page-header--bg-inner-js {
   background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-color: rgb(42, 58, 74);
   background-repeat: no-repeat;
+  background-position: center top;
+  min-height: 237px;
 }
 
 @media (min-width: @tablet-width) {
-  .page-header {
-    width: @tablet-width;
-  }
-
   .page-header__strip::before {
-    width: @tablet-width;
     height: 110px;
   }
 
@@ -146,8 +153,7 @@
   }
 
   .page-header--bg-index-js::after {
-    background-image: url("../img/iphone-hand-tablet@1x.png");
-    width: 700px;
+    width: 100px;
     height: 545px;
     bottom: 0;
     left: -20px;
@@ -174,34 +180,30 @@
     margin-top: 24px;
   }
 
+  .page-header__slogan-wrapper-float {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: -270px -109px;
+    min-height: 620px;
+  }
+
+  .page-header__slogan-wrapper-fixed {
+    width: 620px;
+  }
+
+  .page-header__slogan-wrapper-fixed::before {
+    background-image: url("../img/iphone-hand-tablet@1x-cropped.png");
+    width: 490px;
+    height: 545px;
+    bottom: -382px;
+    left: 136px;
+  }
+
   .page-header__slogan {
     font-size: 40px;
     line-height: 48px;
-    min-height: 620px;
-    width: @tablet-width;
-    background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-position: -270px -109px;
-    padding: 94px 371px 0 50px;
+    width: 251px;
+    padding: 94px 0 0 49px;
     margin: 0;
-  }
-
-  .page-header__slogan::before {
-    background-image: url("../img/iphone-hand-tablet@1x.png");
-    width: 700px;
-    height: 545px;
-    bottom: 0;
-    left: -20px;
-  }
-
-  .page-header__slogan--js-mod {
-    background: none;
-    padding: 93px 0 0 50px;
-    width: 290px;
-    height: auto;
-  }
-
-  .page-header__slogan--js-mod::before {
-    background: none;
   }
 
   .page-header__caption {
@@ -220,46 +222,52 @@
   .page-header--bg-inner-js {
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-repeat: no-repeat;
-    background-position: -270px 0;
+    background-position: center top;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .page-header {
-    width: @desktop-width;
-    padding: 0 130px;
-  }
-
   .page-header--bg-index-desktop-no-js {
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-repeat: no-repeat;
-    background-position: -680px 0;
+    background-position: center 0;
     min-height: 853px;
   }
 
-  .page-header--bg-index-desktop-no-js::after {
+  .page-header__slogan-wrapper-float {
+    margin: 0 auto;
+    background: none;
+  }
+
+  .page-header__slogan-wrapper-fixed {
+    width: 940px;
+    margin: 0 auto;
+  }
+
+  .page-header__slogan-wrapper-fixed::before {
     content: "";
     position: absolute;
     background-image: url("../img/iphone-hand-desktop@1x.png");
-    width: 1050px;
+    width: 900px;
     height: 645px;
-    top: 208px;
-    left: 146px;
+    top: 99px;
+    left: 16px;
     display: block;
   }
 
   .page-header__strip::before {
-    width: @desktop-width;
+    width: 100%;
   }
 
   .page-header--bg-index-js {
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-repeat: no-repeat;
-    background-position: -680px 0;
+    background-position: center 0;
     min-height: 853px;
   }
 
   .page-header__wrapper {
+    margin: 0 auto;
     display: flex;
     width: 940px;
     min-height: 110px;
@@ -267,6 +275,8 @@
     position: relative;
     padding-bottom: 16px;
   }
+
+
   /* opacity block without js*/
   .page-header__logo-container::after {
     content: "";
@@ -310,25 +320,14 @@
     line-height: 60px;
     width: 300px;
     text-align: center;
-    background: none;
     height: auto;
-  }
-
-  .page-header__slogan::before {
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    overflow: hidden;
   }
 
   .page-header--bg-inner-desktop {
     min-height: 394px;
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-repeat: no-repeat;
-    background-position: -680px 0;
+    background-position: center top;
   }
 
   .page-header__caption {

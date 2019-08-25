@@ -1,17 +1,26 @@
 .effect {
   display: none;
+  width: 100%;
+  background-color: @gray;
 }
 
 @media (min-width: @tablet-width) {
   .effect {
     display: block;
     position: relative;
-    background-color: @white;
-    width: @tablet-width;
-    padding: 96px 20px 104px 328px;
+    background-color: @gray;
+    padding-top: 96px;
+    padding-bottom: 130px;
   }
 
-  .effect::before {
+  .effect__container {
+    position: relative;
+    margin: 0 auto;
+    width: @tablet-width;
+    padding-left: 329px;
+  }
+
+  .effect__container::before {
     content: "";
     display: block;
     width: 364px;
@@ -20,11 +29,11 @@
     background-repeat: no-repeat;
     position: absolute;
     left: 18px;
-    top: 58px;
+    top: -40px;
     z-index: 1;
   }
 
-  .effect::after {
+  .effect__container::after {
     content: "24";
     position: absolute;
     display: block;
@@ -34,12 +43,13 @@
     font-size: 96px;
     line-height: 150px;
     font-weight: 700;
-    top: 134px;
+    top: 37px;
     left: 83px;
   }
 
   .effect__caption {
     margin: 0;
+    margin-bottom: 7px;
     color: @black;
     font-size: 30px;
     line-height: 36px;
@@ -63,37 +73,32 @@
 
 @media (min-width: @desktop-width) {
   .effect {
-    background-color: @gray;
-    width: @desktop-width;
     padding-top: 123px;
-    padding-left: 496px;
   }
 
-  .effect::before {
+  .effect__container {
+    width: 940px;
+    padding-left: 366px;
+  }
+
+  .effect__container::before {
     background-image: url("../img/icon-timer-desktop.svg");
-    left: 87px;
-    top: 28px;
+    left: -43px;
+    top: -95px;
     width: 540px;
     height: 445px;
   }
 
-  .effect::after {
+  .effect__container::after {
     font-size: 120px;
     line-height: 187px;
-    left: 210px;
-    top: 125px;
-  }
-
-  .effect__wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 570px;
-    margin-bottom: 15px;
+    left: 80px;
+    top: 1px;
   }
 
   .effect__caption {
     line-height: 30px;
+    margin-bottom: 25px;
   }
 
   .effect__caption:nth-child(1) {
@@ -101,11 +106,15 @@
     margin-right: 8px;
   }
 
+  .effect__break {
+    display: none;
+  }
+
   .effect__text {
     margin: 0;
     font-size: 18px;
     line-height: 30px;
-    width: 550px;
+    width: 520px;
     margin-bottom: 30px;
   }
 

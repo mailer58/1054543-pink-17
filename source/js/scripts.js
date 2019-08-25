@@ -17,6 +17,7 @@
   var toggle = document.getElementById("menuToggle");
   var mainNav = document.querySelector(".site-list");
   var pageHeaderSlogan = document.querySelector(".page-header__slogan");
+  var pageHeaderSloganWrapperFloat = document.querySelector(".page-header__slogan-wrapper-float");
   var pageHeader = document.querySelector(".page-header");
   var bgDownload = document.getElementById("download");
   var pageHeaderCaption = document.querySelector(".page-header__caption");
@@ -25,7 +26,7 @@
   var fileName = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
   var downloadWrapper = document.querySelector(".download__wrapper");
   var tablet = window.matchMedia("(min-width: 660px)");
-  var desktop = window.matchMedia("(min-width: 1200px)");
+  var desktop = window.matchMedia("(min-width: 960px)");
   var mobile = window.matchMedia("(min-width: 320px)");
   var pageMain = document.querySelector(".page-main--bg-index");
   var pageHeaderWrapper = document.querySelector(".page-header__wrapper-enable");
@@ -71,7 +72,8 @@ console.log(mainNav);
     if (fileName === "index.html") {
       downloadWrapper.classList.add("download__wrapper--up");
       pageHeader.classList.add("page-header--bg-index-js");
-      //pageHeaderSlogan.classList.add("page-header__slogan--js-mod");
+      pageHeaderSlogan.classList.add("page-header__slogan--js-mod");
+      pageHeaderSloganWrapperFloat.classList.add("page-header__slogan-wrapper-float--js-mod");
     } else {
       pageHeaderCaption.classList.add("page-header__caption--js-bg-disable");
       pageHeader.classList.add("page-header--bg-inner-js");

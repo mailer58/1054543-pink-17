@@ -6,7 +6,8 @@
 
 .features__header {
   position: relative;
-  margin-bottom: 64px;
+  z-index: 1;
+  margin: 0 auto 64px;
 }
 
 .features__caption {
@@ -23,23 +24,30 @@
   margin-bottom: 29px;
 }
 
+.features__wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.features__wrapper::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -302px;
+  width: 100%;
+  height: 1790px;
+  background-image: url("../img/bg-triangle-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
 .features__list {
   .list-reset();
   position: relative;
-  background-color: @gray;
-  padding: 50px 20px 0;
-}
-
-.features__list::before {
-  content: "";
-  position: absolute;
-  display: block;
+  padding: 114px 20px 0;
+  margin: 0 auto;
   width: 320px;
-  height: 32px;
-  background-image: url("../img/bg-triangle-mobile.svg");
-  background-repeat: no-repeat;
-  top: -32px;
-  right: 0;
 }
 
 .features__item {
@@ -108,16 +116,16 @@
     width: 355px;
   }
 
+  .features__wrapper::before {
+    top: -278px;
+    height: 1300px;
+  }
+
   .features__list {
     padding-left: 328px;
     padding-top: 25px;
-  }
-
-  .features__list::before {
-    top: -50px;
-    background-image: url("../img/bg-triangle-tablet.svg");
-    width: 660px;
-    height: 50px;
+    margin: 0;
+    width: auto;
   }
 
   .features__title {
@@ -153,13 +161,13 @@
 
 @media (min-width: @desktop-width) {
   .features {
-    width: @desktop-width;
     padding-top: 66px;
   }
 
   .features__header {
-    width: @desktop-width;
-    margin-bottom: 172px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 172px;
   }
 
   .features__caption {
@@ -176,11 +184,18 @@
   }
 
   .features__list {
-    padding: 262px 161px 0;
     display: flex;
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
+    padding: 262px 31px 0;
+    margin: 0 auto;
+    width: 940px;
+  }
+
+  .features__wrapper::before {
+    top: -298px;
+    height: 1300px;
   }
 
   .features__item {
@@ -238,13 +253,6 @@
     height: 302px;
     left: -27px;
     bottom: 261px;
-  }
-
-  .features__list::before {
-    top: -92px;
-    background-image: url("../img/bg-triangle-desktop.svg");
-    width: 1200px;
-    height: 92px;
   }
 
   .features__title {
