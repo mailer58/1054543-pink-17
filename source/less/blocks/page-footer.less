@@ -1,5 +1,37 @@
+.page-footer {
+  margin: 0 auto;
+  width: 320px;
+}
+
+.page-footer__logo-image {
+  display: block;
+  margin: 0 auto 43px;
+}
+
 .page-footer__developer {
   margin: 0;
   text-align: center;
   line-height: 18px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: @tablet-width;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .page-footer__logo-image {
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: @desktop-width;
+    padding: 0 130px;
+  }
 }

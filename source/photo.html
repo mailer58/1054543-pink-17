@@ -3,129 +3,117 @@
 
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Фотографии</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
-    <header class="page-header">
-      <div class="page-header__logo-container">
-        <a class="page-header__logo" href="index.html">
-          <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="74" height="22" alt="Логотип Pink" id="siteLogo">
-        </a>
-        <button class="page-header__main-nav-toggle" type="button" id="toggle"><img src="img/icon-menu-burger.svg" class="svg-burger" id="menuToggle" width="50" height="24" alt="Переключатель меню"></button>
-      </div>
-      <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list" id="main-nav__list">
-            <li class="site-list__item">
-              <a class="site-list" href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link-active">Фотографии</a>
-            </li>
-            <li class="site-list__item">
-              <a href="competition.html">Конкурс</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#" target="_blank">Html academy</a>
-            </li>
-          </ul>
+    <header class="page-header page-header--bg-inner-desktop">
+      <div class="page-header__wrapper">
+        <div class="page-header__logo-container">
+          <a class="page-header__logo" href="index.html">
+            <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="74" height="22" alt="Логотип Pink" id="siteLogo">
+          </a>
+          <button class="page-header__main-nav-toggle" type="button" id="toggle"><img src="img/icon-menu-burger.svg" class="svg-burger" id="menuToggle" width="50" height="24" alt="Переключатель меню"></button>
         </div>
-      </nav>
-      <h1 class="page-header__caption container">
+        <nav class="main-nav">
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-list" id="main-nav__list">
+              <li class="site-list__item">
+                <a class="site-list" href="index.html">Главная</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link-active">Фотографии</a>
+              </li>
+              <li class="site-list__item">
+                <a href="competition.html">Конкурс</a>
+              </li>
+              <li class="site-list__item">
+                <a href="#" target="_blank">HTML Academy</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <h1 class="page-header__caption">
         Фотографии пользователей
       </h1>
     </header>
     <main class="page-main">
       <section class="photo">
         <h2 class="visually-hidden">Список фотографий</h2>
-        <div class="photo__container">
-          <p class="photo__intro">
-            Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
-          </p>
+        <p class="photo__intro">
+          Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
+        </p>
+        <div class="photo__panorama">
+          <div class="photo__button-container">
+            <a class="photo__button" href="#">Панорама дня</a>
+          </div>
+          <div class="photo__container">
+            <p class="photo__author-name photo__author-name--panorama">Анна <span class="photo__time">(5 минут назад)</span></p>
+            <p class="photo__comment photo__comment--panorama">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
+            </p>
+            <p class="photo__like photo__like--panorama">Нравится: 215</p>
+          </div>
         </div>
         <ul class="photo__list">
           <li class="photo__item">
-            <a class="photo__button" href="#">Панорама дня</a>
-            <a class="photo__link photo__link--panorama" href="#">
-              <img src="img/panorama-mobile.jpg" width="320" height="137" alt="Панорама дня">
-            </a>
-            <div class="photo__wrapper photo__wrapper--first">
-              <p class="photo__author-name">Анна <span class="photo__time">(5 минут назад)</span></p>
-              <p class="photo__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
-              </p>
-              <p class="photo__like">Нравится: 215</p>
-            </div>
-          </li>
-          <li class="photo__item">
-            <a class="photo__link" href="#">
-              <img src="img/photo-1-mobile.jpg" width="280" height="180" alt="Фотография">
-            </a>
             <div class="photo__wrapper">
+              <a href="#" class="photo__link"></a>
               <p class="photo__author-name">Левон <span class="photo__time">(5 часов назад)</span></p>
               <p class="photo__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-              <p class="photo__like">Нравится: 356</p>
             </div>
+            <p class="photo__like">Нравится: 356</p>
           </li>
           <li class="photo__item">
-            <a class="photo__link" href="#">
-              <img src="img/photo-2-mobile.jpg" width="280" height="180" alt="Фотография">
-            </a>
             <div class="photo__wrapper">
+              <a href="#" class="photo__link"></a>
               <p class="photo__author-name">Антон <span class="photo__time">(12 часов назад)</span></p>
               <p class="photo__comment">Соседи будут рады!</p>
-              <p class="photo__like">Нравится: 666</p>
             </div>
+            <p class="photo__like">Нравится: 666</p>
           </li>
           <li class="photo__item">
-            <a class="photo__link" href="#">
-              <img src="img/photo-3-mobile.jpg" width="280" height="180" alt="Фотография">
-            </a>
             <div class="photo__wrapper">
+              <a href="#" class="photo__link"></a>
               <p class="photo__author-name">Борис <span class="photo__time">(20 часов назад)</span></p>
               <p class="photo__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
-              <p class="photo__like">Нравится: 215</p>
             </div>
+            <p class="photo__like">Нравится: 215</p>
           </li>
           <li class="photo__item">
-            <a class="photo__link" href="#">
-              <img src="img/photo-4-mobile.jpg" width="280" height="180" alt="Фотография">
-            </a>
             <div class="photo__wrapper">
+              <a href="#" class="photo__link"></a>
               <p class="photo__author-name">Сергей <span class="photo__time">(25 часов назад)</span></p>
               <p class="photo__comment">Самая кубанская в мире!</p>
-              <p class="photo__like">Нравится: 4</p>
             </div>
+            <p class="photo__like">Нравится: 4</p>
           </li>
           <li class="photo__item">
-            <a class="photo__link" href="#">
-              <img src="img/photo-5-mobile.jpg" width="280" height="180" alt="Фотография">
-            </a>
             <div class="photo__wrapper">
+              <a href="#" class="photo__link"></a>
               <p class="photo__author-name">Максим <span class="photo__time">(40 часов назад)</span></p>
               <p class="photo__comment">Где снег-то?</p>
-              <p class="photo__like">Нравится: 150</p>
             </div>
+            <p class="photo__like">Нравится: 150</p>
           </li>
           <li class="photo__item">
-            <a class="photo__link" href="#">
-              <img src="img/photo-6-mobile.jpg" width="280" height="180" alt="Фотография">
-            </a>
             <div class="photo__wrapper">
+              <a href="#" class="photo__link"></a>
               <p class="photo__author-name">Надежда <span class="photo__time">(45 часов назад)</span></p>
               <p class="photo__comment">Всем GM и взаимные лайки!</p>
-              <p class="photo__like">Нравится: 2560</p>
             </div>
+            <p class="photo__like">Нравится: 2560</p>
           </li>
         </ul>
       </section>
     </main>
-    <footer class="page-footer container">
+    <footer class="page-footer">
       <a class="page-footer__logo-link" href="index.html">
         <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="41" alt="Pink logo">
       </a>
-      <div class="page-footer__social social">
+      <div class="page-footer__social">
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--twitter" href="#" aria-label="Мы в Твиттере" target="_blank"></a>
