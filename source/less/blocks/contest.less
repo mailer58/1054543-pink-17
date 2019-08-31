@@ -1,0 +1,607 @@
+.contest {
+  width: 100%;
+}
+
+.contest__intro {
+  text-align: center;
+  line-height: 30px;
+  margin: 45px auto 34px auto;
+  width: 275px;
+}
+
+.contest__fill-in {
+  display: none;
+}
+
+.contest__form {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.contest__label {
+  position: relative;
+  display: block;
+  color: @pink;
+  text-transform: uppercase;
+  line-height: 30px;
+  z-index: 0;
+}
+
+.contest__input-text {
+  font: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  border: 2px solid rgb(229, 229, 229);
+  width: 280px;
+  padding: 15px 20px 15px 20px;
+  margin-bottom: 17px;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.contest__user-data {
+  .fieldset-reset();
+  width: 320px;
+  margin: 0 auto 24px auto;
+  padding: 0 20px;
+}
+
+.contest__legend {
+  line-height: 18px;
+  color: @pink;
+  text-transform: uppercase;
+  text-align: center;
+  width: 225px;
+  margin: 0 auto 44px auto;
+}
+ .contest__legend--contact {
+   display: none;
+ }
+
+.contest__legend--what-application {
+  margin-bottom: 40px;
+}
+
+.contest__label {
+  margin-left: 22px;
+  margin-bottom: 5px;
+}
+
+.contest__achievements-wrapper {
+  background-color: @gray;
+  padding-top: 38px;
+  padding-bottom: 46px;
+}
+
+.contest__achievements {
+  .fieldset-reset();
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contest__achievements-list {
+  .list-reset();
+}
+
+.contest__achievements-item {
+  position: relative;
+  font-size: 18px;
+  line-height: 30px;
+  margin-left: 69px;
+  margin-bottom: 52px;
+}
+
+.contest__achievements-item:last-child {
+  margin-bottom: 0;
+}
+
+.contest__achievements-checkbox + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  background-color: @white;
+  border: 2px solid rgb(229, 229, 229);
+  border-radius: 3px;
+  left: -69px;
+  top: -4px;
+}
+
+.contest__achievements-checkbox:checked+label::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 17px;
+  background-image: url("../img/icon-yes.svg");
+  left: -60px;
+  top: 6px;
+}
+
+.contest__contact {
+  .fieldset-reset();
+  margin: 0 auto;
+  width: 320px;
+  padding: 0 20px;
+  padding-top: 32px;
+  margin-bottom: 25px;
+}
+
+.contest__what-application-wrapper {
+  background-color: @gray;
+  padding-top: 38px;
+  padding-bottom: 47px;
+}
+
+
+.contest__what-application {
+  .fieldset-reset();
+  margin: 0 auto;
+  width: 320px;
+  padding: 0 20px;
+}
+
+.contest__what-application-list {
+  .list-reset();
+}
+
+.contest__what-application-item {
+  position: relative;
+  font-size: 18px;
+  line-height: 30px;
+  margin-left: 69px;
+  margin-bottom: 44px;
+}
+
+.contest__what-application-item:last-child {
+  margin-bottom: 0;
+}
+
+.contest__what-application-radio + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 39px;
+  height: 39px;
+  border: 2px solid rgb(229, 229, 229);
+  border-radius: 50%;
+  top: -5px;
+  left: -69px;
+  background-color: @white;
+}
+
+.contest__what-application-radio:checked + label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  top: 7px;
+  left: -57px;
+  background-color: @pink;
+}
+
+.contest__emotions {
+  .fieldset-reset();
+  margin: 0 auto 50px auto;
+  width: 320px;
+  height: auto;
+}
+
+.contest__legend--emotions {
+  padding-top: 38px;
+  margin-bottom: 16px;
+}
+
+.contest__emotions-textarea {
+  display: block;
+  width: 280px;
+  height: 201px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: block;
+  resize: none;
+  font: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  border: 2px solid rgb(229, 229, 229);
+}
+
+.contest__button {
+  border: 0 none;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: @white;
+  text-transform: uppercase;
+  background-color: rgb(42, 171, 109);
+  width: 280px;
+  padding: 16px 10px;
+  margin: 0 auto 35px auto;
+  border-radius: 3px;
+  display: block;
+}
+
+.contest__footnote {
+  line-height: 30px;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contest__footnote-span {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .contest__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contest__intro {
+    width: 500px;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 92px;
+    margin-bottom: 71px;
+    order: 1;
+  }
+  .contest__fill-in {
+    display: block;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .contest__user-data {
+    width: @tablet-width;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: baseline;
+    order: 2;
+    margin-bottom: 40px;
+  }
+
+  .contest__legend {
+    width: 370px;
+  }
+
+  .contest__input-text--last-name {
+    width: 524px;
+    margin-bottom: 52px;
+  }
+
+  .contest__input-text--first-name {
+    width: 564px;
+    margin-bottom: 52px;
+  }
+
+  .contest__input-text--patronymic {
+      width: 524px;
+    }
+
+  .contest__label {
+    margin: 0;
+    margin-right: 23px;
+  }
+  .contest__what-application-wrapper {
+    order: 3;
+    background-color: @white;
+    padding-top: 0;
+  }
+
+  .contest__contact {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(229, 229, 229);
+    order: 4;
+    width: 620px;
+    padding-top: 0;
+    margin-bottom: 57px;
+  }
+  .contest__achievements-wrapper {
+    order: 5;
+    margin-bottom: 12px;
+  }
+  .contest__emotions {
+    order: 6;
+  }
+  .contest__submit {
+    order: 7;
+  }
+
+  .contest__achievements {
+    border: 2px solid rgb(229, 229, 229);
+    width: 620px;
+  }
+
+  .contest__what-application {
+    border: 2px solid rgb(229, 229, 229);
+    width: 620px;
+    padding-top: 9px;
+    padding-bottom: 60px;
+    margin-bottom: 10px;
+  }
+  .contest__what-application-item {
+    margin-left: 97px;
+  }
+
+  .contest__what-application-radio + label::before {
+    left: -59px;
+  }
+  .contest__what-application-radio:checked + label::after {
+    left: -47px;
+  }
+
+  .contest__legend--contact {
+    display: block;
+    width: 260px;
+    margin-bottom: 37px;
+  }
+
+  .contest__input-text--phone-number {
+    position: relative;
+    margin: 0 auto;
+    width: 503px;
+    order: 1;
+    margin-bottom: 9px;
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+  .contest__label--phone-number {
+    order: 2;
+    margin-left: 58px;
+    margin-bottom: 30px;
+  }
+
+  .contest__input-text--email {
+    margin: 0 auto;
+    width: 503px;
+    order: 3;
+    margin-bottom: 9px;
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+  .contest__label--email {
+    order: 4;
+    margin-left: 58px;
+    margin-bottom: 27px;
+  }
+
+  .contest__achievements-wrapper {
+    padding-top: 0;
+    background-color: @white;
+  }
+
+     .contest__achievements {
+    padding-bottom: 52px;
+}
+
+  .contest__legend--achievements {
+    width: 436px;
+    margin-bottom: 49px;
+  }
+  .contest__achievements-item {
+    margin-left: 97px;
+  }
+
+  .contest__achievements-checkbox + label::before {
+    left: -58px;
+  }
+  .contest__achievements-checkbox:checked + label::after {
+    left: -49px;
+  }
+
+  .contest__emotions {
+    border: 2px solid rgb(229, 229, 229);
+    width: 620px;
+    margin-bottom: 67px;
+    padding-bottom: 51px;
+  }
+
+  .contest__legend--emotions {
+    padding-top: 0;
+    margin-bottom: 37px;
+    width: 261px;
+  }
+
+  .contest__emotions-textarea {
+    width: 502px;
+    height: 194px;
+  }
+
+  .contest__submit {
+    width: 620px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .contest__button {
+    margin: 0;
+    width: 300px;
+  }
+
+  .contest__footnote {
+    margin: 0;
+    width: 183px;
+  }
+
+  .contest__wrapper-phone,
+  .contest__wrapper-email {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+@media (min-width: @desktop-width) {
+  .contest__intro {
+    width: 770px;
+    margin-bottom: 70px;
+  }
+
+  .contest__fill-in {
+    display: inline;
+  }
+
+  .contest__form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 940px;
+  }
+
+  .contest__user-data {
+    width: 470px;
+    padding: 0;
+    padding-top: 14px;
+    margin: 0;
+    margin-right: 35px;
+  }
+  .contest__input-text--last-name {
+    width: 339px;
+    margin-bottom: 13px;
+  }
+  .contest__input-text--first-name {
+    width: 380px;
+    margin-bottom: 10px;
+  }
+
+  .contest__what-application {
+    width: 433px;
+    padding-top: 0;
+  }
+
+  .contest__legend--what-application {
+    margin-bottom: 51px;
+  }
+
+  .contest__input-text--patronymic {
+    width: 339px;
+  }
+
+  .contest__what-application-item {
+    margin-left: 113px;
+  }
+
+  .contest__contact {
+    width: 940px;
+    flex-direction: row;
+    margin-bottom: 57px;
+  }
+
+  .contest__input-text--phone-number,
+  .contest__input-text--email {
+    width: 410px;
+    margin: 0;
+  }
+
+  .contest__input-text--phone-number {
+    order: 1;
+    width: 377px;
+    margin-left: 37px;
+    margin-right: 68px;
+    margin-bottom: 10px;
+    background-position: right center;
+  }
+
+   .contest__input-text--email {
+     width: 377px;
+     margin-bottom: 10px;
+     background-position: right center;
+}
+
+  .contest__label--phone-number {
+    order: 2;
+    margin-bottom: 0;
+  }
+
+  .contest__label--email {
+    margin-left: 20px;
+    margin-bottom: 13px;
+  }
+
+  .contest__legend--contact {
+    margin-bottom: 33px;
+  }
+
+  .contest__achievements {
+    width: 940px;
+    padding-bottom: 7px;
+  }
+
+  .contest__achievements-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+  .contest__achievements-item:not(:nth-child(1)) {
+    margin-left: 0;
+  }
+
+  .contest__achievements-item:nth-child(1) {
+    order: 1;
+    margin-right: 116px;
+  }
+
+  .contest__achievements-item:nth-child(2) {
+    order: 4;
+    margin-left: 97px;
+    margin-right: 155px;
+  }
+
+  .contest__achievements-item:nth-child(3) {
+    order: 2;
+    margin-right: 114px;
+  }
+
+  .contest__achievements-item:nth-child(4) {
+    order: 5;
+    margin-right: 123px;
+  }
+
+  .contest__achievements-item:nth-child(5) {
+    order: 3;
+  }
+
+  .contest__achievements-item:nth-child(6) {
+    order: 6;
+  }
+
+  .contest__emotions {
+    width: 940px;
+    padding-bottom: 43px;
+  }
+
+  .contest__legend--emotions {
+     margin-bottom: 33px;
+}
+
+  .contest__emotions-textarea {
+    width: 823px;
+    height: 129px;
+  }
+
+  .contest__submit {
+    width: 940px;
+  }
+
+  .contest__footnote {
+    width: 315px;
+  }
+
+  .contest__footnote-span {
+    display: inline;
+  }
+}
