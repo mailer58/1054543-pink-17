@@ -1,0 +1,180 @@
+.price {
+background-color: @white;
+}
+
+.price__table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 620px;
+  background-color: @white;
+}
+
+.price th {
+  width: 25%;
+}
+
+.price th:not(.price__th-empty) {
+  background-color: @bluish;
+}
+
+.price__th-empty {
+  background-color: rgb(242, 242, 242);
+}
+
+.price td {
+  position: relative;
+}
+
+.price__tariff {
+  margin: 0;
+  padding-top: 12px;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 700;
+  color: @white;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.price__usd {
+  margin: 0;
+  padding-bottom: 6px;
+  color: @white;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.price th:nth-child(3),
+ .price th:nth-child(4){
+  border-left: 2px solid rgb(242, 242, 242);
+}
+
+.price th:nth-child(4) {
+  border-right: 2px solid rgb(40, 54, 69);
+}
+
+
+
+.price__td-empty {
+  background-color: transparent;
+}
+
+.price__options {
+  width: 25%;
+  line-height: 30px;
+  border: 2px solid rgb(229, 229, 229);
+  padding: 6px 15px 9px;
+}
+
+.price__icon {
+  border-bottom: 2px solid rgb(229, 229, 229);
+  border-right: 2px solid rgb(229, 229, 229);
+
+}
+
+.price__icon--yes {
+  background-image: url("../img/icon-yes-green.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 21%;
+}
+
+.price__icon--no {
+  background-image: url("../img/icon-no.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 17%;
+}
+
+
+
+@media (min-width: @tablet-width) {
+  .price {
+    padding-top: 105px;
+    background-image: url("../img/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center -149px;
+    background-size: 100% 562%;
+  }
+
+  .price__hit {
+    position: relative;
+    &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url("../img/bg-hit-tablet.svg");
+    background-size: 100%;
+    background-position: 0 top;
+    background-repeat: no-repeat;
+    width: 61px;
+    height: 61px;
+  }
+    &::after {
+      content: "Хит";
+      display: block;
+      position: absolute;
+      color: @white;
+      width:auto;
+      height: auto;
+      top: 5px;
+      left: 7px;
+      font-weight: 300;
+      line-height: 30px;
+      text-transform: uppercase;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+.price {
+  padding-top: 138px;
+  background-position: center -297px;
+  background-size: 125% 752%;
+}
+
+.price__table {
+  width: 940px;
+}
+
+.price__tariff {
+   font-size: 18px;
+   padding-top: 16px;
+}
+
+.price__usd {
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+.price__options {
+  font-size: 18px;
+  padding: 14px 21px 15px;
+}
+
+.price__icon--yes {
+  background-size: 13%;
+}
+
+.price__icon--no {
+  background-size: 11%;
+}
+
+.price__hit {
+  &::before {
+  background-image: url("../img/bg-hit.svg");
+  background-size: 76%;
+  width: 95px;
+  height: 95px;
+}
+  &::after {
+    top: 12px;
+    left: 11px;
+  }
+}
+}

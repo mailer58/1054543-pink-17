@@ -17,8 +17,8 @@
             <picture>
               <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
               <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-            <img class="page-headeer__logo-image" src="img/logo-pink-white-mobile.svg" alt="Логотип Pink" id="siteLogo">
-          </picture>
+              <img class="page-headeer__logo-image" src="img/logo-pink-white-mobile.svg" alt="Логотип Pink" id="siteLogo">
+            </picture>
           </a>
           <button class="page-header__main-nav-toggle" type="button" id="toggle"><img src="img/icon-menu-burger.svg" class="svg-burger" id="menuToggle" width="50" height="24" alt="Переключатель меню"></button>
         </div>
@@ -128,6 +128,69 @@
           </p>
           <a class="effect__link" href="#">Узнать больше об исследовании</a>
         </div>
+      </section>
+      <section class="reviews">
+        <h2 class="reviews__header visually-hidden">Отзывы пользователей</h2>
+        <ul class="reviews__list">
+          <li class="reviews__item">
+            <p class="reviews__user-name">Николай Петров</p>
+            <p class="reviews__user-info">25 лет, водитель трамвая</p>
+            <div class="reviews__buttons-wrapping">
+              <button class="reviews__arrow-left" type="button">Лево</button>
+              <button class="reviews__arrow-right" type="button">Право</button>
+            </div>
+            <p class="reviews__comment">«Это приложение перевернуло мой мир и позволило
+              по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей
+              будущей женой в комментариях к выложенной фотографии!»
+            </p>
+          </li>
+        </ul>
+        <div class="reviews__slider-controls">
+          <i class="reviews__slider-control reviews__slider-control--active"></i>
+          <i class="reviews__slider-control"></i>
+          <i class="reviews__slider-control"></i>
+        </div>
+      </section>
+      <section class="price">
+        <table class="price__table">
+          <thead>
+            <tr class="price__table-header">
+              <th class="price__th-empty"></th>
+              <th>
+                <p class="price__tariff">База</p>
+                <p class="price__usd">1,99 usd</p>
+              </th>
+              <th class="price__hit">
+                <p class="price__tariff">Стандарт</p>
+                <p class="price__usd">3,99 usd</p>
+              </th>
+              <th>
+                <p class="price__tariff">Анлим</p>
+                <p class="price__usd">9,99 usd</p>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="price__content">
+              <td class="price__options">Розовый фильтр</td>
+              <td class="price__icon price__icon--yes"></td>
+              <td class="price__icon price__icon--yes"></td>
+              <td class="price__icon price__icon--yes"></td>
+            </tr>
+            <tr class="price__content">
+              <td class="price__options">Смайлики</td>
+              <td class="price__icon price__icon--no"></td>
+              <td class="price__icon price__icon--yes"></td>
+              <td class="price__icon price__icon--yes"></td>
+            </tr>
+            <tr class="price__content">
+              <td class="price__options">Комментарии</td>
+              <td class="price__icon price__icon--no"></td>
+              <td class="price__icon price__icon--no"></td>
+              <td class="price__icon price__icon--yes"></td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </main>
     <script src="js/scripts.js"></script>
