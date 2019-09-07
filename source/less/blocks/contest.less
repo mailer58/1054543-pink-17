@@ -37,6 +37,13 @@
   margin-bottom: 17px;
   background-color: transparent;
   z-index: 1;
+  &:hover,
+  &:focus {
+    border-color: @bluish;
+  }
+  &:active {
+    border-color: @pink;
+  }
 }
 
 .contest__user-data {
@@ -109,6 +116,15 @@
   top: -4px;
 }
 
+.contest__achievements-checkbox + label:hover::before,
+.contest__achievements-checkbox + label:focus::before {
+  border-color: @bluish;
+}
+
+.contest__achievements-checkbox + label:active::before {
+  border-color: @pink;
+}
+
 .contest__achievements-checkbox:checked+label::after {
   content: "";
   position: absolute;
@@ -172,6 +188,15 @@
   background-color: @white;
 }
 
+.contest__what-application-radio + label:hover::before,
+ .contest__what-application-radio + label:focus::before {
+  border-color: @bluish;
+}
+
+.contest__what-application-radio + label:active::before {
+  border-color: @pink;
+}
+
 .contest__what-application-radio:checked + label::after {
   content: "";
   display: block;
@@ -208,10 +233,18 @@
   font-size: 18px;
   line-height: 30px;
   border: 2px solid rgb(229, 229, 229);
+  &:hover,
+  &:focus {
+    border-color: @bluish;
+  }
+  &:active {
+    border-color: @pink;
+  }
 }
 
 .contest__button {
   border: 0 none;
+  font-family: inherit;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
@@ -223,6 +256,15 @@
   margin: 0 auto 35px auto;
   border-radius: 3px;
   display: block;
+  &:hover {
+    background-color: rgb(28, 155, 94);
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+  &:disabled {
+    background-color: rgb(229, 229, 229);
+  }
 }
 
 .contest__footnote {

@@ -50,9 +50,23 @@
   border-bottom: none;
 }
 
-.page-headeer__logo-image {
-  display: block;
+.page-header__logo-large {
+  display: none;
 }
+
+.page-header__logo-small path {
+  fill: @white;
+}
+
+.page-header__logo-small:hover path {
+  fill: @pink;
+}
+
+.page-header__logo-small:active path {
+  opacity: 0.3;
+}
+
+
 
 .page-header__main-nav-toggle {
   background: none;
@@ -174,6 +188,32 @@
     height: 110px;
   }
 
+  .page-header__logo-small {
+    display: none;
+  }
+
+  .page-header__logo-large {
+    display: block;
+    margin-top: 6px;
+  }
+
+  .page-header__logo-large .glasses-spark,
+  .page-header__logo-large .spark{
+    display: none;
+  }
+
+  .page-header__logo-large .logo-text-path {
+    fill: @white;
+  }
+
+  .page-header__logo-large:hover .logo-text-path {
+    fill: @pink;
+  }
+
+  .page-header__logo-large:active {
+    opacity: 0.3;
+  }
+
   .page-header__main-nav-toggle {
     margin-top: 24px;
   }
@@ -231,6 +271,27 @@
     background-repeat: no-repeat;
     background-position: center 0;
     min-height: 853px;
+  }
+
+  .page-header__logo-large {
+     margin-top: 27px;
+   }
+
+  .page-header__logo-large .glasses-simple {
+    display: none;
+  }
+
+  .page-header__logo-large .glasses-spark-path {
+    fill: @white;
+  }
+
+  .page-header__logo-large:hover .glasses-spark-path {
+    fill: @pink;
+  }
+
+  .page-header__logo-large .glasses-spark,
+  .page-header__logo-large .spark{
+    display: block;
   }
 
   .page-header__slogan-wrapper-float {
