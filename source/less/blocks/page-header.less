@@ -17,6 +17,8 @@
   background-repeat: no-repeat;
   background-position: center 0;
   position: relative;
+  background-size: cover;
+
 }
 
 /* adding opacity strip for header with js */
@@ -47,6 +49,24 @@
 .page-header__logo-container--disable-border {
   border-bottom: none;
 }
+
+.page-header__logo-large {
+  display: none;
+}
+
+.page-header__logo-small path {
+  fill: @white;
+}
+
+.page-header__logo-small:hover path {
+  fill: @pink;
+}
+
+.page-header__logo-small:active path {
+  opacity: 0.3;
+}
+
+
 
 .page-header__main-nav-toggle {
   background: none;
@@ -138,6 +158,7 @@
   background-color: rgb(42, 58, 74);
   background-repeat: no-repeat;
   background-position: center top;
+  background-size: cover;
   min-height: 237px;
 }
 
@@ -167,13 +188,30 @@
     height: 110px;
   }
 
-  .page-header__logo-image {
-    margin-top: 7px;
-    padding-left: 146px;
-    width: 146px;
-    height: 71px;
-    background-image: url("../img/logo-pink-white-tablet.svg");
-    background-repeat: no-repeat;
+  .page-header__logo-small {
+    display: none;
+  }
+
+  .page-header__logo-large {
+    display: block;
+    margin-top: 6px;
+  }
+
+  .page-header__logo-large .glasses-spark,
+  .page-header__logo-large .spark{
+    display: none;
+  }
+
+  .page-header__logo-large .logo-text-path {
+    fill: @white;
+  }
+
+  .page-header__logo-large:hover .logo-text-path {
+    fill: @pink;
+  }
+
+  .page-header__logo-large:active {
+    opacity: 0.3;
   }
 
   .page-header__main-nav-toggle {
@@ -223,6 +261,7 @@
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: center top;
+    background-size: auto;
   }
 }
 
@@ -232,6 +271,27 @@
     background-repeat: no-repeat;
     background-position: center 0;
     min-height: 853px;
+  }
+
+  .page-header__logo-large {
+     margin-top: 27px;
+   }
+
+  .page-header__logo-large .glasses-simple {
+    display: none;
+  }
+
+  .page-header__logo-large .glasses-spark-path {
+    fill: @white;
+  }
+
+  .page-header__logo-large:hover .glasses-spark-path {
+    fill: @pink;
+  }
+
+  .page-header__logo-large .glasses-spark,
+  .page-header__logo-large .spark{
+    display: block;
   }
 
   .page-header__slogan-wrapper-float {
@@ -305,12 +365,6 @@
     padding: 0;
     width: auto;
     height: auto;
-  }
-
-  .page-header__logo-image {
-    margin-top: 27px;
-    height: 41px;
-    background-image: url("../img/logo-pink-white-desktop.svg");
   }
 
   .page-header__slogan {

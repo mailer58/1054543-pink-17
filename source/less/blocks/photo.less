@@ -1,5 +1,6 @@
 .photo {
   padding-top: 45px;
+  padding-bottom: 24px;
   background-color: @white;
 }
 
@@ -24,43 +25,14 @@
   background-color: @gray;
 }
 
+.photo__item img {
+  margin-bottom: 18px;
+}
+
 .photo__wrapper {
   margin: 0 auto;
   display: block;
-  padding-top: 198px;
   background-repeat: no-repeat;
-}
-
-.photo__item:nth-child(1) .photo__wrapper {
-  background-image: url("../img/photo-car-mobile@1x.jpg");
-}
-
-.photo__item:nth-child(2) .photo__wrapper {
-  background-image: url("../img/photo-drumset-mobile@1x.jpg");
-}
-
-.photo__item:nth-child(3) .photo__wrapper {
-  background-image: url("../img/photo-window-mobile@1x.jpg");
-}
-
-.photo__item:nth-child(4) .photo__wrapper {
-  background-image: url("../img/photo-fair-mobile@1x.jpg");
-}
-
-.photo__item:nth-child(5) .photo__wrapper {
-  background-image: url("../img/photo-pov-mobile@1x.jpg");
-}
-
-.photo__item:nth-child(6) .photo__wrapper {
-  background-image: url("../img/photo-wing-mobile@1x.jpg");
-}
-
-.photo__link {
-  display: block;
-  width: 280px;
-  height: 180px;
-  position: absolute;
-  top: 0;
 }
 
 .photo__panorama {
@@ -147,6 +119,7 @@
 @media (min-width: @tablet-width) {
   .photo {
     padding-top: 92px;
+    padding-bottom: 46px;
   }
 
   .photo__intro {
@@ -237,42 +210,22 @@
     min-height: 453px;
   }
 
-  .photo__wrapper {
-    padding-top: 323px;
-    margin: 0;
-  }
-
-  .photo__link {
-    height: 300px;
+  .photo__item img {
     width: 300px;
+    height: 300px;
+    margin-bottom: 23px;
   }
 
-  .photo__item:nth-child(1) .photo__wrapper {
-    background-image: url("../img/photo-car-tablet@1x.jpg");
-  }
-
-  .photo__item:nth-child(2) .photo__wrapper {
-    background-image: url("../img/photo-drumset-tablet@1x.jpg");
-  }
-
-  .photo__item:nth-child(3) .photo__wrapper {
-    background-image: url("../img/photo-window-tablet@1x.jpg");
-  }
-
-  .photo__item:nth-child(4) .photo__wrapper {
-    background-image: url("../img/photo-fair-tablet@1x.jpg");
-  }
-
-  .photo__item:nth-child(5) .photo__wrapper {
-    background-image: url("../img/photo-pov-tablet@1x.jpg");
-  }
-
-  .photo__item:nth-child(6) .photo__wrapper {
-    background-image: url("../img/photo-wing-tablet@1x.jpg");
+  .photo__wrapper {
+    margin: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .photo {
+    padding-bottom: 6px;
+  }
+
   .photo__intro {
     width: 630px;
     margin-bottom: 88px;
@@ -309,7 +262,7 @@
 
   .photo__list {
     width: @desktop-width;
-    padding: 50px 10px;
+    padding: 50px 10px 0 10px;
   }
 
   .photo__item {
@@ -317,35 +270,7 @@
     min-height: 554px;
   }
 
-  .photo__wrapper {
-    padding-top: 424px;
-  }
-
-  .photo__link {
+  .photo__item img {
     height: 400px;
-  }
-
-  .photo__item:nth-child(1) .photo__wrapper {
-    background-image: url("../img/photo-car-desktop@1x.jpg");
-  }
-
-  .photo__item:nth-child(2) .photo__wrapper {
-    background-image: url("../img/photo-drumset-desktop@1x.jpg");
-  }
-
-  .photo__item:nth-child(3) .photo__wrapper {
-    background-image: url("../img/photo-window-desktop@1x.jpg");
-  }
-
-  .photo__item:nth-child(4) .photo__wrapper {
-    background-image: url("../img/photo-fair-desktop@1x.jpg");
-  }
-
-  .photo__item:nth-child(5) .photo__wrapper {
-    background-image: url("../img/photo-pov-desktop@1x.jpg");
-  }
-
-  .photo__item:nth-child(6) .photo__wrapper {
-    background-image: url("../img/photo-wing-desktop@1x.jpg");
   }
 }

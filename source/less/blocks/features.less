@@ -6,8 +6,8 @@
 
 .features__header {
   position: relative;
-  z-index: 1;
-  margin: 0 auto 64px;
+  z-index: 0;
+  margin: 0 auto;
 }
 
 .features__caption {
@@ -27,25 +27,18 @@
 .features__wrapper {
   width: 100%;
   position: relative;
-}
-
-.features__wrapper::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -302px;
-  width: 100%;
-  height: 1790px;
-  background-image: url("../img/bg-triangle-desktop.svg");
+  background-image: url("../img/bg-triangle.svg");
   background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
+  background-position: center -293px;
+  background-size: 270% 400%;
+  padding-top: 64px;
+  z-index: 5;
 }
 
 .features__list {
   .list-reset();
   position: relative;
-  padding: 114px 20px 0;
+  padding: 50px 20px 0;
   margin: 0 auto;
   width: 320px;
 }
@@ -99,7 +92,6 @@
 
   .features__header {
     width: @tablet-width;
-    margin-bottom: 97px;
   }
 
   .features__caption {
@@ -114,6 +106,12 @@
 
   .features__caption--margin2 {
     width: 355px;
+  }
+
+  .features__wrapper {
+    padding-top: 95px;
+    background-position: center -149px;
+    background-size: 100% 400%;
   }
 
   .features__wrapper::before {
@@ -166,8 +164,6 @@
 
   .features__header {
     width: 100%;
-    margin: 0 auto;
-    padding-bottom: 172px;
   }
 
   .features__caption {
@@ -192,6 +188,12 @@
     margin: 0 auto;
     width: 940px;
   }
+
+  .features__wrapper {
+     padding-top: 172px;
+     background-position: center -157px;
+     background-size: 100% 400%;
+   }
 
   .features__wrapper::before {
     top: -298px;
