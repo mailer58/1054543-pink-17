@@ -9,10 +9,9 @@
   font-weight: 700;
   color: @black;
   text-align: center;
-  margin: 0 auto;
-  margin-bottom: 12px;
+  margin: 0 auto 12px;
   padding-top: 43px;
-  max-width: 280px;
+  width: 280px;
 }
 
 .reviews__list {
@@ -47,41 +46,45 @@
 .reviews__slider {
   margin: 0 auto;
 }
-
 @media (min-width: @tablet-width) {
-   .reviews {
-  padding-bottom: 19px;
-}
-   .reviews__user-name {
-     order: 2;
-     font-size: 20px;
-     line-height: 30px;
-     font-weight: 700;
-     padding-top: 33px;
-     margin-bottom: 3px;
-   }
-   .reviews__user-info {
-     display: block;
-     max-width: 300px;
-     margin: 0;
-     order: 3;
-     line-height: 30px;
-     margin: 0 auto;
-   }
-   .reviews__comment {
-     order: 1;
-     font-size: 18px;
-     line-height: 30px;
-     width: 640px;
-   }
-}
+  .reviews {
+    padding-bottom: 19px;
+  }
 
+  .reviews__user-name {
+    order: 2;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    padding-top: 33px;
+    margin-bottom: 3px;
+  }
+
+  .reviews__user-info {
+    display: block;
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    order: 3;
+    line-height: 30px;
+    margin: 0 auto;
+  }
+
+  .reviews__comment {
+    order: 1;
+    font-size: 18px;
+    line-height: 30px;
+    width: 640px;
+  }
+}
 @media (min-width: @desktop-width) {
   .reviews {
     padding-top: 173px;
     background-image: url("../img/icon-quotes.svg");
     background-position: center 59px;
     background-repeat: no-repeat;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   .reviews__comment {
@@ -99,7 +102,7 @@
 
   .reviews__buttons-wrapping {
     display: block;
-    width:  940px;
+    width: 940px;
     margin: 0 auto;
     position: relative;
   }
@@ -119,9 +122,11 @@
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.3;
+
     &:hover {
       opacity: 1;
     }
+
     &:active {
       opacity: 0.1;
     }
@@ -142,9 +147,11 @@
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.3;
+
     &:hover {
       opacity: 1;
     }
+
     &:active {
       opacity: 0.1;
     }

@@ -3,6 +3,10 @@
   margin-bottom: 39px;
 }
 
+.editor-picture {
+  min-width: 280px;
+}
+
 .editor__header {
   width: 260px;
   margin: 0 auto 43px auto;
@@ -103,6 +107,7 @@
   font-weight: 700;
   width: 280px;
   margin: 0 auto 13px auto;
+  background-color: transparent;
   &:hover {
     background-color: @pink;
     color: @white;
@@ -114,6 +119,7 @@
 }
 
 .editor__send--cancel {
+  background-color: transparent;
   color: rgba(40, 54, 69, 0.1);
   border-color: rgba(40, 54, 69, 0.1);
   &:hover {
@@ -169,7 +175,7 @@
   }
 
   .editor__item {
-    width: 254px;
+    width: 50px;
     margin-bottom: 49px;
   }
 
@@ -285,14 +291,17 @@
 }
 
 @media (min-width: @desktop-width) {
+    .editor {
+      margin-bottom: 101px;
+    }
+
     .editor__header {
       margin-bottom: 65px;
     }
 
     .editor__container{
-      width: 865px;
+      width: 940px;
       margin: 0 auto;
-      padding-left: 43px;
     }
 
     .editor__list {
@@ -324,7 +333,7 @@
 }
 
     .editor__right-column {
-      width: 500px;
+      width: auto;
     }
 
     .editor__controls-wrapper {
@@ -364,4 +373,10 @@
     .editor__send {
     width: 182px;
 }
+
+.editor-picture {
+  min-width: 300px;
+  margin-left: 79px;
+}
+
 }
