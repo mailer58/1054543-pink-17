@@ -7,8 +7,8 @@
   left: 50%;
   transform: translateX(-50%);
 }
-
 /* backing */
+
 .slider__control {
   display: inline-block;
   width: 16px; //backing
@@ -22,16 +22,16 @@
 }
 
 .slider__control::before {
-content: "";
-position: absolute;
-left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
-display: block;
-width: 5px;
-height: 5px;
-background-color: rgb(190, 194, 199);
-border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: rgb(190, 194, 199);
+  border-radius: 50%;
 }
 
 .slider__control:hover::before {

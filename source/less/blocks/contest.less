@@ -24,6 +24,8 @@
   color: @pink;
   text-transform: uppercase;
   line-height: 30px;
+  margin-left: 22px;
+  margin-bottom: 5px;
   z-index: 0;
 }
 
@@ -70,11 +72,6 @@
 
 .contest__legend--what-application {
   margin-bottom: 40px;
-}
-
-.contest__label {
-  margin-left: 22px;
-  margin-bottom: 5px;
 }
 
 .contest__achievements-wrapper {
@@ -128,7 +125,7 @@
   border-color: @pink;
 }
 
-.contest__achievements-checkbox:checked+label::after {
+.contest__achievements-checkbox:checked + label::after {
   content: "";
   position: absolute;
   display: block;
@@ -229,7 +226,6 @@
   height: 201px;
   margin: 0 auto;
   padding: 16px 20px;
-  display: block;
   resize: none;
   font: inherit;
   font-size: 18px;
@@ -287,6 +283,7 @@
 .contest__footnote-span {
   display: none;
 }
+
 @media (min-width: @tablet-width) {
   .contest__form {
     display: flex;
@@ -363,19 +360,31 @@
   .contest__achievements-wrapper {
     order: 5;
     margin-bottom: 12px;
+    padding-top: 0;
+    background-color: @white;
   }
 
   .contest__emotions {
     order: 6;
+    border: 2px solid rgb(229, 229, 229);
+    width: 620px;
+    margin-bottom: 67px;
+    padding-bottom: 51px;
   }
 
   .contest__submit {
     order: 7;
+    width: 620px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
   }
 
   .contest__achievements {
     border: 2px solid rgb(229, 229, 229);
     width: 620px;
+    padding-bottom: 52px;
   }
 
   .contest__what-application {
@@ -437,15 +446,6 @@
     margin-bottom: 27px;
   }
 
-  .contest__achievements-wrapper {
-    padding-top: 0;
-    background-color: @white;
-  }
-
-  .contest__achievements {
-    padding-bottom: 52px;
-  }
-
   .contest__legend--achievements {
     width: 436px;
     margin-bottom: 49px;
@@ -463,13 +463,6 @@
     left: -49px;
   }
 
-  .contest__emotions {
-    border: 2px solid rgb(229, 229, 229);
-    width: 620px;
-    margin-bottom: 67px;
-    padding-bottom: 51px;
-  }
-
   .contest__legend--emotions {
     padding-top: 0;
     margin-bottom: 37px;
@@ -479,14 +472,6 @@
   .contest__emotions-textarea {
     width: 502px;
     height: 194px;
-  }
-
-  .contest__submit {
-    width: 620px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
   }
 
   .contest__button {
@@ -505,6 +490,7 @@
     flex-direction: column;
   }
 }
+
 @media (min-width: @desktop-width) {
   .contest {
     margin-bottom: 70px;

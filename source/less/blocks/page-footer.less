@@ -9,39 +9,40 @@
 
 .page-footer__logo-link {
   display: block;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 40px;
   width: 147px;
   height: 41px;
 }
 
-.page-footer__logo-image .glasses-spark,
-.page-footer__logo-image .spark {
+.page-footer__glasses-spark,
+.page-footer__spark {
   fill: @pink;
   display: none;
 }
 
-.page-footer__logo-image .glasses-spark-path {
+.page-footer__glasses-spark-path {
   fill: @pink;
 }
 
-.page-footer__logo-image .logo-text-path {
+.page-footer__logo-text-path {
   fill: @bluish;
 }
 
-.page-footer__logo-image .spark-path {
+.page-footer__spark-path {
   fill: @bluish;
 }
 
 .page-footer__logo-image:hover path {
   fill: @pink;
 }
+
 .page-footer__logo-image:active path {
   opacity: 0.3;
 }
 
 .page-footer__social {
   padding: 0;
-  margin: 0 auto 45px auto;
+  margin: 0 auto 45px;
   width: 177px;
 }
 
@@ -62,9 +63,11 @@
   top: -6px;
   left: 137px;
   fill: @pink;
+
   &:hover {
     fill: @bluish;
   }
+
   &:active {
     opacity: 0.3;
   }
@@ -88,9 +91,7 @@
 
   .page-footer__social {
     padding: 0;
-    margin: 0;
-    margin-left: 41px;
-    margin-top: 3px;
+    margin: 3px 0 0 41px;
     width: 174px;
   }
 
@@ -98,17 +99,17 @@
     margin-bottom: 40px;
   }
 
-.page-footer__developer-link {
-  margin-top: 20px;
-  margin-right: 42px;
-  margin-bottom: 0;
-  padding: 0;
-  width: auto;
-}
+  .page-footer__developer-link {
+    margin-top: 20px;
+    margin-right: 42px;
+    margin-bottom: 0;
+    padding: 0;
+    width: auto;
+  }
 
-.page-footer__developer-icon {
-  left: 103px;
-}
+  .page-footer__developer-icon {
+    left: 103px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -120,8 +121,7 @@
   }
 
   .page-footer__social {
-    margin: 0;
-    margin-right: 229px;
+    margin: 0 229px 0 0;
     padding-top: 5px;
   }
 
@@ -136,8 +136,7 @@
   }
 
   .page-footer__logo-link {
-    margin: 0;
-    margin-right: 236px;
+    margin: 0 236px 0 0;
   }
 
   .page-footer__developer-icon {
@@ -145,12 +144,12 @@
     left: 127px;
   }
 
-  .page-footer__logo-image .glasses-simple {
+  .page-footer__glasses-simple {
     display: none;
   }
 
-  .page-footer__logo-image .glasses-spark,
-  .page-footer__logo-image .spark {
+  .page-footer__glasses-spark,
+  .page-footer__spark {
     display: inline-block;
   }
 }

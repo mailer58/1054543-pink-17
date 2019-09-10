@@ -44,11 +44,11 @@ var story = document.querySelector("#contest__emotions-textarea");
 var failureButton = document.querySelector(".popup-failure__button");
 var successButton = document.querySelector(".popup-success__button");
 var lastNameStorage = "";
-var patronymicStorage ="";
-var firstNameStorage ="";
-var emailStorage ="";
+var patronymicStorage = "";
+var firstNameStorage = "";
+var emailStorage = "";
 var phoneStorage ="";
-var storyStorage ="";
+var storyStorage = "";
 var isStorageSupport  = true;
 
 logoPinkRoseMobile = new Image();
@@ -143,6 +143,7 @@ window.onload = function() {
   });
 
 //form:
+if (fileName === "competition.html") {
   try {
     lastNameStorage = localStorage.getItem("lastName");
     firstNameStorage = localStorage.getItem("firstName");
@@ -154,7 +155,6 @@ window.onload = function() {
   } catch (err) {
     isStorageSupport = false;
   }
-
 
   if (firstNameStorage || lastNameStorage || patronymicStorage || emailStorage || phoneStorage || storyStorage){
     firstName.value = firstNameStorage;
@@ -230,5 +230,5 @@ window.onload = function() {
       evt.preventDefault();
       winSuccess.classList.remove("popup-success--show");
     });
-
+  }
 };
