@@ -1,4 +1,4 @@
-.slider-wrapper {
+.slider {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,16 +9,19 @@
 }
 
 /* backing */
-.slider-control {
+.slider__control {
   display: inline-block;
   width: 16px; //backing
   height: 16px; //backing
   border-radius: 50%;
   position: relative;
   cursor: pointer;
+  border: 0 none;
+  background: none;
+  font-size: 0;
 }
 
-.slider-control::before {
+.slider__control::before {
 content: "";
 position: absolute;
 left: 50%;
@@ -31,11 +34,11 @@ background-color: rgb(190, 194, 199);
 border-radius: 50%;
 }
 
-.slider-control:hover::before {
+.slider__control:hover::before {
   background-color: @bluish;
 }
 
-.slider-control--active::before {
+.slider__control--active::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -49,6 +52,18 @@ border-radius: 50%;
   border-radius: 50%;
 }
 
-.slider-control--active:hover::before {
+.slider__control--active:hover::before {
   background-color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .slider--price {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider--reviews {
+    display: none;
+  }
 }
