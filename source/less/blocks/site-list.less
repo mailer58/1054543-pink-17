@@ -3,6 +3,20 @@
   text-align: center;
   border-top: rgb(72, 84, 97) 1px solid;
   border-bottom: rgba(0, 0, 0, 0.9) 1px solid;
-  width: 100%;
-  padding: 16px 0;
+  padding: 15px 10px;
+}
+
+@media (min-width: @desktop-width) {
+  .site-list__item {
+    display: block;
+    background-color: transparent;
+    border-top: none;
+    border-bottom: none;
+    padding: 0;
+  }
+
+  .site-list__link-active {
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+  }
 }

@@ -1,0 +1,382 @@
+.editor {
+  background-color: @white;
+  margin-bottom: 39px;
+}
+
+.editor-picture {
+  min-width: 280px;
+}
+
+.editor__header {
+  width: 260px;
+  margin: 0 auto 43px auto;
+  font: inherit;
+  line-height: 30px;
+  text-align: center;
+}
+
+.editor__wrapper {
+  width: 100%;
+  background-color: @gray;
+  padding: 20px 0 29px;
+  margin-bottom: 21px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 201px;
+    background-color: rgb(221, 223, 224);
+  }
+}
+
+.editor__image {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.editor__list {
+  .list-reset();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
+  margin: 0 auto;
+  padding: 40px 48px 0 34px;
+  margin-bottom: 33px;
+}
+
+.editor__icon-crop,
+.editor__icon-fill,
+.editor__icon-contrast {
+  fill: @pink;
+  &:hover {
+    fill: @bluish;
+    opacity: 0.3;
+  }
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.editor__controls {
+  width: 240px;
+  margin: 0 auto 73px auto;
+  position: relative;
+}
+
+.editor__controls--tablet {
+  display: none;
+}
+
+.editor__scale {
+  width: 100%;
+  height: 2px;
+  background-color: @bluish;
+}
+
+.editor__toggle {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  transform: translateY(-50%);
+  left: 79%;
+  background-color: @gray;
+  border: 3px solid rgb(210, 40, 86);
+  border-radius: 50%;
+  cursor: pointer;
+  &:active {
+    background-color: @pink;
+  }
+}
+
+.editor__button {
+  display: block;
+  cursor: pointer;
+  background: none;
+  border: 0 none;
+  padding: 0;
+}
+
+.editor__send {
+  border-color: @pink;
+  color: @pink;
+  font-size: 18px;
+  font-weight: 700;
+  width: 280px;
+  margin: 0 auto 13px auto;
+  background-color: transparent;
+  &:hover {
+    background-color: @pink;
+    color: @white;
+  }
+  &:active {
+    background-color: @pink;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.editor__send--cancel {
+  background-color: transparent;
+  color: rgba(40, 54, 69, 0.1);
+  border-color: rgba(40, 54, 69, 0.1);
+  &:hover {
+    color: rgba(40, 54, 69, 0.3);
+    border-color: rgb(181, 185, 190);
+    background-color: @gray;
+  }
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+      border-color: rgb(181, 185, 190);
+      background-color: rgba(40, 54, 69, 0.3);
+    }
+  }
+
+.editor__buttons-list {
+  .list-reset();
+}
+
+@media (min-width: @tablet-width) {
+  .editor {
+    margin-bottom: 0;
+  }
+
+  .editor__header {
+    font-size: 18px;
+    line-height: 30px;
+    width: 500px;
+    margin-bottom: 68px;
+  }
+
+  .editor__wrapper {
+    padding-top: 57px;
+    &::before {
+      height: 0;
+      background: none;
+    }
+  }
+
+  .editor__container {
+    width: 620px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .editor__list {
+    width: 53px;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    margin-left: 47px;
+    padding: 0;
+    padding-top: 9px;
+  }
+
+  .editor__item {
+    width: 50px;
+    margin-bottom: 49px;
+  }
+
+  .editor__item:nth-child(2) {
+    margin-bottom: 45px;
+  }
+
+.editor__controls-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 19px;
+  margin-bottom: 6px;
+}
+
+  .editor__controls {
+    width: 201px;
+    margin: 0;
+    margin-bottom: 72px;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 1px;
+      width: 277px;
+      background-color: rgb(221, 223, 224);
+      top: 37px;
+      left: -56px;
+    }
+  }
+
+  .editor__controls:nth-child(1) .editor__toggle {
+    left: 73%;
+  }
+
+  .editor__controls:nth-child(2) .editor__toggle {
+    left: 12%;
+  }
+
+  .editor__controls:nth-child(3) .editor__toggle {
+    left: 48%;
+  }
+
+  .editor__controls:nth-child(2) {
+    margin-bottom: 67px;
+  }
+
+
+  .editor__controls--tablet {
+    display: block;
+  }
+
+  .editor__icon-crop {
+    width: 23px;
+    height: 23px;
+  }
+
+  .editor__icon-fill {
+    width: 24px;
+    height: 24px;
+  }
+
+  .editor__icon-contrast {
+    width: 17px;
+    height: 17px;
+    margin-left: 6px;
+  }
+
+  .editor__image {
+    margin: 0;
+    width: 300px;
+    height: 400px;
+  }
+
+  .editor__buttons-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 25px;
+  }
+
+  .editor__buttons-item {
+    margin-bottom: 24px;
+  }
+
+  .editor__right-column {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 314px;
+  }
+
+  .editor__send {
+    margin: 0;
+    width: 259px;
+  }
+
+  .editor__item:nth-child(1) .editor__toggle {
+    left: 72%;
+  }
+
+  .editor__item:nth-child(2) .editor__toggle {
+    left: 12%;
+  }
+
+  .editor__item:nth-child(3) .editor__toggle {
+    left: 49%;
+  }
+
+  .editor__buttons-list {
+    margin-left: 47px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+    .editor {
+      margin-bottom: 101px;
+    }
+
+    .editor__header {
+      margin-bottom: 65px;
+    }
+
+    .editor__container{
+      width: 940px;
+      margin: 0 auto;
+    }
+
+    .editor__list {
+      padding-top: 0;
+      margin-left: 90px;
+    }
+
+    .editor__icon-crop {
+      width: 43px;
+      height: 43px;
+    }
+
+    .editor__icon-fill {
+      width: 47px;
+      height: 47px;
+    }
+
+    .editor__icon-contrast {
+      width: 30px;
+      height: 30px;
+    }
+
+    .editor__item {
+      margin-bottom: 27px;
+    }
+
+    .editor__item:nth-child(2) {
+      margin-bottom: 26px;
+}
+
+    .editor__right-column {
+      width: auto;
+    }
+
+    .editor__controls-wrapper {
+      margin-left: 40px;
+    }
+
+    .editor__controls {
+      width: 286px;
+      &::before {
+        left: -93px;
+        width: 410px;
+      }
+    }
+
+  .editor__controls:nth-child(1) .editor__toggle {
+    left: 24%;
+}
+
+.editor__controls:nth-child(2) .editor__toggle {
+  left: 86%;
+}
+
+.editor__controls:nth-child(3) .editor__toggle {
+  left: 55%;
+}
+
+    .editor__buttons-list {
+      flex-direction: row;
+      margin-left: 90px;
+      margin-top: 104px;
+    }
+
+    .editor__buttons-item:nth-child(1) {
+      margin-right: 45px;
+    }
+
+    .editor__send {
+    width: 182px;
+}
+
+.editor-picture {
+  min-width: 300px;
+  margin-left: 79px;
+}
+
+}

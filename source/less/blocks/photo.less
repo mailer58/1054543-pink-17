@@ -1,41 +1,54 @@
 .photo {
-  padding-top: 55px;
+  padding-top: 45px;
+  padding-bottom: 24px;
+  background-color: @white;
 }
 
 .photo__intro {
   text-align: center;
   line-height: 30px;
-  margin: 0 auto 55px;
+  margin: 0 auto 49px auto;
   width: 250px;
-}
-
-.photo__container {
-  .size-mobile();
 }
 
 .photo__list {
   .list-reset();
   width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .photo__item {
   position: relative;
-  padding: 0 20px;
+  padding-bottom: 20px;
   margin-bottom: 20px;
+  background-color: @gray;
 }
 
-.photo__item:first-child {
-  padding: 0;
+.photo__item img {
+  margin-bottom: 18px;
 }
 
 .photo__wrapper {
-  background-color: @gray;
-  padding: 25px 18px 26px;
+  margin: 0 auto;
+  display: block;
+  background-repeat: no-repeat;
 }
 
-.photo__wrapper--first {
-  width: 280px;
+.photo__panorama {
+  min-width: 320px;
+  position: relative;
+  padding-top: 137px;
+  background-image: url("../img/panorama-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  margin: 0 auto 20px auto;
+}
+
+.photo__button-container {
+  position: relative;
   margin: 0 auto;
+  width: 320px;
 }
 
 .photo__wrapper--extra-padding {
@@ -44,7 +57,7 @@
 
 .photo__author-name {
   font-weight: 700;
-  margin: 0 0 12px;
+  margin: 0 17px;
 }
 
 .photo img {
@@ -53,12 +66,13 @@
 
 .photo__time {
   font-weight: 300;
+  font-size: 12px;
   text-transform: uppercase;
   margin: 0;
 }
 
 .photo__comment {
-  margin: 0 0 25px;
+  margin: 0 17px;
 }
 
 .photo__like {
@@ -66,7 +80,7 @@
   font-size: 12px;
   color: @pink;
   text-transform: uppercase;
-  margin: 0 0 0 31px;
+  margin: 9px 0 0 49px;
 }
 
 .photo__like::before {
@@ -76,20 +90,187 @@
   height: 12px;
   display: block;
   background-image: url("../img/icon-heart.svg");
-  left: -30px;
-  bottom: 6px;
+  left: -31px;
+  bottom: 5px;
 }
 
 .photo__button {
   position: absolute;
   right: 20px;
+  top: -137px;
   display: block;
   font-size: 12px;
   font-weight: 700;
   color: @white;
   text-transform: uppercase;
   background-color: @pink;
-  max-width: 140px;
+  width: 140px;
   text-align: center;
   padding: 6px 10px;
+}
+
+.photo__container {
+  background-color: @gray;
+  width: 280px;
+  margin: 0 auto;
+  padding: 18px 0 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .photo {
+    padding-top: 92px;
+    padding-bottom: 46px;
+  }
+
+  .photo__intro {
+    font-size: 18px;
+    line-height: 30px;
+    width: 460px;
+    margin-bottom: 76px;
+  }
+
+  .photo__panorama {
+    padding-top: 509px;
+    background-image: url("../img/panorama-tablet@1x.jpg");
+    min-width: 660px;
+    background-position: center top;
+    margin-bottom: 0;
+  }
+
+  .photo__button-container {
+    width: 660px;
+  }
+
+  .photo__button {
+    top: -453px;
+  }
+
+  .photo__container {
+    width: 620px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 24px 0;
+  }
+
+  .photo__author-name {
+    margin: 0 27px;
+  }
+
+  .photo__comment {
+    margin: 0 27px;
+  }
+
+  .photo__like {
+    margin: 12px 27px 0;
+  }
+
+  .photo__like::before {
+    left: 228px;
+  }
+
+  .photo__like--panorama {
+    position: relative;
+    margin: 0 59px 0 0;
+    order: 2;
+  }
+
+  .photo__like--panorama::before {
+    position: absolute;
+    top: 5px;
+    left: 106px;
+  }
+
+  .photo__author-name--panorama {
+    order: 1;
+  }
+
+  .photo__comment--panorama {
+    width: 520px;
+    order: 3;
+  }
+
+  .photo__list {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 660px;
+  }
+
+  .photo__item {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 21px;
+    margin-bottom: 22px;
+    min-height: 453px;
+  }
+
+  .photo__item img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 23px;
+  }
+
+  .photo__wrapper {
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo {
+    padding-bottom: 6px;
+  }
+
+  .photo__intro {
+    width: 630px;
+    margin-bottom: 88px;
+  }
+
+  .photo__panorama {
+    padding-top: 506px;
+    background-image: url("../img/panorama-desktop@1x.jpg");
+    background-position: center top;
+  }
+
+  .photo__button {
+    top: -453px;
+    left: 660px;
+  }
+
+  .photo__container {
+    width: 940px;
+    padding-top: 23px;
+  }
+
+  .photo__like--panorama {
+    margin-right: 62px;
+  }
+
+  .photo__like--panorama::before {
+    top: 6px;
+    left: 107px;
+  }
+
+  .photo__comment--panorama {
+    width: @desktop-width;
+  }
+
+  .photo__list {
+    width: @desktop-width;
+    padding: 50px 10px 0 10px;
+  }
+
+  .photo__item {
+    margin-bottom: 55px;
+    min-height: 554px;
+  }
+
+  .photo__item img {
+    height: 400px;
+  }
 }
